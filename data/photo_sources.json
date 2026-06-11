@@ -113,19 +113,19 @@
     },
     {
       "dish": "Basque seafood soup",
-      "source": "https://www.montimar.nl//wp-content/uploads/2019/01/33.jpg",
-      "title": "Montimar official seafood skillet photo",
-      "credit": "Montimar Restaurant",
-      "license": "Restaurant website photo",
-      "search": "Official Montimar site"
+      "source": "https://www.food.com/recipe/basque-fish-soup-284365",
+      "title": "Basque Fish Soup Recipe - Food.com",
+      "credit": "food.com",
+      "license": "External web source; see linked page",
+      "search": "Basque fish soup seafood shellfish bowl"
     },
     {
       "dish": "Asian grilled chicken",
-      "source": "https://commons.wikimedia.org/wiki/File:Chicken_teriyaki%2C_Fried_chicken%2C_Krasnoyarsk%2C_Russia.jpg",
-      "title": "Chicken teriyaki, Fried chicken, Krasnoyarsk, Russia.jpg",
-      "credit": "Wikimedia Commons contributor",
-      "license": "See Commons file page",
-      "search": "Exact Wikimedia Commons file override"
+      "source": "https://www.snohimit.com/menu",
+      "title": "Chicken & Gyoza - Himitsu Teriyaki",
+      "credit": "Himitsu Teriyaki",
+      "license": "External web source; see linked page",
+      "search": "chicken teriyaki gyoza plate restaurant"
     },
     {
       "dish": "Lamb duo",
@@ -217,11 +217,11 @@
     },
     {
       "dish": "Asparagus risotto",
-      "source": "https://www.montimar.nl/wp-content/uploads/2019/11/81.jpg",
-      "title": "Montimar official plated vegetarian dish photo",
-      "credit": "Montimar Restaurant",
-      "license": "Restaurant website photo",
-      "search": "Official Montimar site"
+      "source": "https://www.onceuponachef.com/recipes/spring-risotto-with-asparagus-peas.html",
+      "title": "Spring Risotto with Asparagus & Peas - Once Upon a Chef",
+      "credit": "Once Upon a Chef",
+      "license": "External web source; see linked page",
+      "search": "asparagus pea risotto parmesan restaurant plate"
     },
     {
       "dish": "Mascarpone semifreddo",

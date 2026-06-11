@@ -203,11 +203,11 @@
     "description": "Northern Spanish fish soup with fish fillets, shellfish and crustaceans",
     "image_query": "basque seafood soup fish shellfish",
     "image": "assets/images/basque-seafood-soup.jpg",
-    "image_title": "Montimar official seafood skillet photo",
-    "image_credit": "Montimar Restaurant",
-    "image_license": "Restaurant website photo",
-    "image_source": "https://www.montimar.nl//wp-content/uploads/2019/01/33.jpg",
-    "image_search": "Official Montimar site"
+    "image_title": "Basque Fish Soup Recipe - Food.com",
+    "image_credit": "food.com",
+    "image_license": "External web source; see linked page",
+    "image_source": "https://www.food.com/recipe/basque-fish-soup-284365",
+    "image_search": "Basque fish soup seafood shellfish bowl"
   },
   {
     "slug": "asian-grilled-chicken",
@@ -218,11 +218,11 @@
     "description": "Grilled chicken breast with crispy chicken dumplings and soy, sesame and chili sauce",
     "image_query": "grilled chicken soy sesame dumplings",
     "image": "assets/images/asian-grilled-chicken.jpg",
-    "image_title": "Chicken teriyaki, Fried chicken, Krasnoyarsk, Russia.jpg",
-    "image_credit": "Wikimedia Commons contributor",
-    "image_license": "See Commons file page",
-    "image_source": "https://commons.wikimedia.org/wiki/File:Chicken_teriyaki%2C_Fried_chicken%2C_Krasnoyarsk%2C_Russia.jpg",
-    "image_search": "Exact Wikimedia Commons file override"
+    "image_title": "Chicken & Gyoza - Himitsu Teriyaki",
+    "image_credit": "Himitsu Teriyaki",
+    "image_license": "External web source; see linked page",
+    "image_source": "https://www.snohimit.com/menu",
+    "image_search": "chicken teriyaki gyoza plate restaurant"
   },
   {
     "slug": "lamb-duo",
@@ -398,11 +398,11 @@
     "description": "Creamy risotto with asparagus, peas, vine tomato, arugula and Parmesan",
     "image_query": "asparagus risotto peas parmesan",
     "image": "assets/images/asparagus-risotto.jpg",
-    "image_title": "Montimar official plated vegetarian dish photo",
-    "image_credit": "Montimar Restaurant",
-    "image_license": "Restaurant website photo",
-    "image_source": "https://www.montimar.nl/wp-content/uploads/2019/11/81.jpg",
-    "image_search": "Official Montimar site"
+    "image_title": "Spring Risotto with Asparagus & Peas - Once Upon a Chef",
+    "image_credit": "Once Upon a Chef",
+    "image_license": "External web source; see linked page",
+    "image_source": "https://www.onceuponachef.com/recipes/spring-risotto-with-asparagus-peas.html",
+    "image_search": "asparagus pea risotto parmesan restaurant plate"
   },
   {
     "slug": "mascarpone-semifreddo",

@@ -63,6 +63,24 @@
     "search": "smoked salmon fennel salad citrus mayonnaise restaurant"
   },
   {
+    "slug": "basque-seafood-soup",
+    "title": "Basque Fish Soup Recipe - Food.com",
+    "credit": "food.com",
+    "license": "External web source; see linked page",
+    "source_url": "https://www.food.com/recipe/basque-fish-soup-284365",
+    "image_url": "https://img.sndimg.com/food/image/upload/w_555,h_416,c_fit,fl_progressive,q_95/v1/img/recipes/28/43/65/picdP1vJM.jpg",
+    "search": "Basque fish soup seafood shellfish bowl"
+  },
+  {
+    "slug": "asian-grilled-chicken",
+    "title": "Chicken & Gyoza - Himitsu Teriyaki",
+    "credit": "Himitsu Teriyaki",
+    "license": "External web source; see linked page",
+    "source_url": "https://www.snohimit.com/menu",
+    "image_url": "https://static.wixstatic.com/media/4f7e01_e6ecfa66367f487bbf233f17617357f5~mv2.jpg",
+    "search": "chicken teriyaki gyoza plate restaurant"
+  },
+  {
     "slug": "lamb-duo",
     "title": "Seared Lamb Medallions With Almond And Mint Pea Cream And Baby ...",
     "credit": "foodservice.aussiebeefandlamb.com",
@@ -142,6 +160,15 @@
     "source_url": "https://bonapeti.com/recipes/r-192275-Grilled_Sea_Bream_Fillet_with_Shrimp_Sauce",
     "image_url": "https://bonapeti.com/files/1200x800/cipura-file-skaridi1.webp",
     "search": "sea bream fillet shrimp saffron sauce restaurant"
+  },
+  {
+    "slug": "asparagus-risotto",
+    "title": "Spring Risotto with Asparagus & Peas - Once Upon a Chef",
+    "credit": "Once Upon a Chef",
+    "license": "External web source; see linked page",
+    "source_url": "https://www.onceuponachef.com/recipes/spring-risotto-with-asparagus-peas.html",
+    "image_url": "https://www.onceuponachef.com/images/2019/04/risotto-recipe.jpg",
+    "search": "asparagus pea risotto parmesan restaurant plate"
   },
   {
     "slug": "lemon-passionfruit-cheesecake",
