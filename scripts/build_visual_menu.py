@@ -467,9 +467,10 @@ def write_html(items):
         cat_items = [item for item in items if item["category"] == category]
         cards = []
         for item in cat_items:
+            price_value = float(item["price"].replace("EUR", "").strip())
             cards.append(
                 f"""
-                <article class="dish-card" data-category="{escape(item['category'])}" data-search="{escape((item['name'] + ' ' + item['original_name'] + ' ' + item['description']).lower())}">
+                <article class="dish-card" data-slug="{escape(item['slug'])}" data-name="{escape(item['name'])}" data-original-name="{escape(item['original_name'])}" data-price="{price_value:.2f}" data-category="{escape(item['category'])}" data-search="{escape((item['name'] + ' ' + item['original_name'] + ' ' + item['description']).lower())}">
                   <a class="dish-image-link" href="{escape(item['image_source'])}" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="{escape(item['image'])}" alt="{escape(item['name'])}">
                   </a>
@@ -481,6 +482,14 @@ def write_html(items):
                     <p class="original-name">{escape(item['original_name'])}</p>
                     <p class="description">{escape(item['description'])}</p>
                     <p class="source-line">Photo: <a href="{escape(item['image_source'])}" target="_blank" rel="noreferrer">{escape(item['image_title'][:80])}</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for {escape(item['name'])}">
+                      <button class="add-button" type="button" data-cart-add="{escape(item['slug'])}">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="{escape(item['slug'])}" hidden>
+                        <button type="button" data-cart-decrease="{escape(item['slug'])}" aria-label="Decrease {escape(item['name'])}">-</button>
+                        <span data-cart-quantity="{escape(item['slug'])}">0</span>
+                        <button type="button" data-cart-increase="{escape(item['slug'])}" aria-label="Increase {escape(item['name'])}">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
                 """
@@ -529,12 +538,39 @@ def write_html(items):
       <button class="filter-button active" type="button" data-category="All">All</button>
       {buttons}
     </div>
+    <button class="cart-button" id="cart-button" type="button" aria-haspopup="dialog" aria-controls="cart-drawer">
+      <span>Cart</span>
+      <strong id="cart-button-count">0 items</strong>
+      <span id="cart-button-total">EUR 0.00</span>
+    </button>
   </nav>
 
   <main>
     {''.join(sections)}
     <p id="empty-state" hidden>No dishes match that search.</p>
   </main>
+
+  <div class="cart-backdrop" id="cart-backdrop" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" aria-hidden="true" hidden>
+    <div class="cart-header">
+      <div>
+        <p class="eyebrow">Local order list</p>
+        <h2 id="cart-title">Order summary</h2>
+      </div>
+      <button class="icon-button" id="cart-close" type="button" aria-label="Close order summary">x</button>
+    </div>
+    <div class="cart-body">
+      <p class="cart-empty" id="cart-empty">No dishes added yet.</p>
+      <div class="cart-items" id="cart-items"></div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cart-total">EUR 0.00</strong>
+      </div>
+      <button class="clear-button" id="cart-clear" type="button">Clear cart</button>
+    </div>
+  </aside>
 
   <footer>
     <p>Menu text and prices are translated from Montimar's public menu page. Photo attributions are stored in <a href="data/photo_sources.json">data/photo_sources.json</a>.</p>
@@ -639,7 +675,7 @@ def write_css():
       top: 0;
       z-index: 10;
       display: grid;
-      grid-template-columns: auto minmax(240px, 420px) minmax(0, 1fr);
+      grid-template-columns: auto minmax(240px, 420px) minmax(0, 1fr) auto;
       align-items: center;
       gap: 10px;
       padding: 10px 24px;
@@ -795,6 +831,232 @@ def write_css():
       text-overflow: ellipsis;
     }
 
+    .dish-actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      min-height: 34px;
+      margin-top: 10px;
+    }
+
+    .add-button,
+    .clear-button {
+      min-height: 34px;
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      padding: 0 14px;
+      font: inherit;
+      font-weight: 700;
+      color: #fff;
+      background: var(--accent);
+      cursor: pointer;
+    }
+
+    .clear-button {
+      width: 100%;
+      border-color: var(--line);
+      color: var(--accent-2);
+      background: #fff;
+    }
+
+    .quantity-control {
+      display: inline-grid;
+      grid-template-columns: 34px 38px 34px;
+      align-items: center;
+      min-height: 34px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .quantity-control button,
+    .icon-button {
+      width: 34px;
+      height: 34px;
+      border: 0;
+      font: inherit;
+      font-weight: 700;
+      color: var(--ink);
+      background: #fff;
+      cursor: pointer;
+    }
+
+    .quantity-control button:hover,
+    .icon-button:hover,
+    .add-button:hover,
+    .clear-button:hover,
+    .cart-button:hover {
+      filter: brightness(0.96);
+    }
+
+    .quantity-control span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 38px;
+      font-weight: 700;
+      border-right: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+
+    .cart-button {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 2px 12px;
+      align-items: center;
+      min-width: 174px;
+      min-height: 44px;
+      border: 1px solid var(--accent);
+      border-radius: 8px;
+      padding: 6px 12px;
+      color: #fff;
+      background: var(--accent);
+      box-shadow: var(--shadow);
+      cursor: pointer;
+    }
+
+    .cart-button span:first-child {
+      font-weight: 700;
+    }
+
+    .cart-button strong {
+      justify-self: end;
+      font-size: 13px;
+    }
+
+    #cart-button-total {
+      grid-column: 1 / -1;
+      font-weight: 700;
+      text-align: left;
+    }
+
+    .cart-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 35;
+      background: rgba(31, 37, 40, 0.34);
+    }
+
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 40;
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr) auto;
+      width: min(420px, 100vw);
+      height: 100vh;
+      border-left: 1px solid var(--line);
+      background: #fff;
+      box-shadow: -12px 0 28px rgba(0, 0, 0, 0.16);
+      transform: translateX(100%);
+      transition: transform 160ms ease;
+    }
+
+    .cart-drawer.open {
+      transform: translateX(0);
+    }
+
+    .cart-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 18px 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cart-header h2 {
+      margin: 0;
+      font-size: 24px;
+      letter-spacing: 0;
+    }
+
+    .icon-button {
+      flex: 0 0 auto;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: var(--muted);
+    }
+
+    .cart-body {
+      min-height: 0;
+      overflow: auto;
+      padding: 14px 18px;
+    }
+
+    .cart-empty {
+      margin: 0;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--muted);
+      background: var(--paper);
+      font-weight: 700;
+    }
+
+    .cart-items {
+      display: grid;
+      gap: 10px;
+    }
+
+    .cart-item {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 10px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .cart-item h3 {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .cart-item p {
+      margin: 3px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .cart-item strong {
+      align-self: start;
+      white-space: nowrap;
+      color: var(--accent-2);
+    }
+
+    .cart-item .quantity-control {
+      grid-column: 1 / -1;
+      justify-self: start;
+    }
+
+    .cart-footer {
+      display: grid;
+      gap: 12px;
+      padding: 14px 18px 18px;
+      border-top: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .cart-total {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 18px;
+    }
+
+    .cart-total span {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
     #empty-state {
       margin: 30px 0;
       padding: 16px;
@@ -828,7 +1090,7 @@ def write_css():
       }
 
       .toolbar {
-        grid-template-columns: auto minmax(160px, 1fr);
+        grid-template-columns: auto minmax(160px, 1fr) auto;
       }
 
       .filter-row {
@@ -888,6 +1150,22 @@ def write_css():
       .source-line {
         display: none;
       }
+
+      .dish-actions {
+        justify-content: flex-start;
+      }
+
+      .cart-button {
+        grid-column: 1 / -1;
+        justify-self: stretch;
+      }
+
+      .cart-header,
+      .cart-body,
+      .cart-footer {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
     }
     """
     (ROOT / "styles.css").write_text(textwrap.dedent(css).strip() + "\n", encoding="utf-8")
@@ -900,8 +1178,168 @@ def write_js():
     const cards = Array.from(document.querySelectorAll('.dish-card'));
     const sections = Array.from(document.querySelectorAll('.menu-section'));
     const empty = document.querySelector('#empty-state');
+    const cartButton = document.querySelector('#cart-button');
+    const cartButtonCount = document.querySelector('#cart-button-count');
+    const cartButtonTotal = document.querySelector('#cart-button-total');
+    const cartDrawer = document.querySelector('#cart-drawer');
+    const cartBackdrop = document.querySelector('#cart-backdrop');
+    const cartClose = document.querySelector('#cart-close');
+    const cartItems = document.querySelector('#cart-items');
+    const cartEmpty = document.querySelector('#cart-empty');
+    const cartTotal = document.querySelector('#cart-total');
+    const cartClear = document.querySelector('#cart-clear');
+
+    const CART_STORAGE_KEY = 'montimar-cart-v1';
+    const menuItems = new Map(
+      cards.map((card) => [
+        card.dataset.slug,
+        {
+          slug: card.dataset.slug,
+          name: card.dataset.name,
+          originalName: card.dataset.originalName,
+          price: Number.parseFloat(card.dataset.price) || 0,
+        },
+      ]),
+    );
 
     let activeCategory = 'All';
+    let cart = loadCart();
+
+    function formatMoney(value) {
+      return `EUR ${value.toFixed(2)}`;
+    }
+
+    function loadCart() {
+      try {
+        const saved = JSON.parse(localStorage.getItem(CART_STORAGE_KEY) || '{}');
+        return Object.fromEntries(
+          Object.entries(saved)
+            .filter(([slug, quantity]) => menuItems.has(slug) && Number.isInteger(quantity) && quantity > 0)
+            .map(([slug, quantity]) => [slug, quantity]),
+        );
+      } catch {
+        return {};
+      }
+    }
+
+    function saveCart() {
+      localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
+    }
+
+    function getQuantity(slug) {
+      return cart[slug] || 0;
+    }
+
+    function setQuantity(slug, quantity) {
+      const nextQuantity = Math.max(0, quantity);
+      if (!menuItems.has(slug)) return;
+      if (nextQuantity === 0) {
+        delete cart[slug];
+      } else {
+        cart[slug] = nextQuantity;
+      }
+      saveCart();
+      renderCart();
+    }
+
+    function increaseItem(slug) {
+      setQuantity(slug, getQuantity(slug) + 1);
+    }
+
+    function decreaseItem(slug) {
+      setQuantity(slug, getQuantity(slug) - 1);
+    }
+
+    function getCartRows() {
+      return Object.entries(cart)
+        .map(([slug, quantity]) => {
+          const item = menuItems.get(slug);
+          return item ? { ...item, quantity, subtotal: item.price * quantity } : null;
+        })
+        .filter(Boolean);
+    }
+
+    function getCartSummary() {
+      return getCartRows().reduce(
+        (summary, item) => ({
+          count: summary.count + item.quantity,
+          total: summary.total + item.subtotal,
+        }),
+        { count: 0, total: 0 },
+      );
+    }
+
+    function itemLabel(count) {
+      return `${count} ${count === 1 ? 'item' : 'items'}`;
+    }
+
+    function renderCardControls() {
+      cards.forEach((card) => {
+        const quantity = getQuantity(card.dataset.slug);
+        const addButton = card.querySelector('[data-cart-add]');
+        const controls = card.querySelector('[data-cart-controls]');
+        const quantityLabel = card.querySelector('[data-cart-quantity]');
+
+        addButton.hidden = quantity > 0;
+        controls.hidden = quantity === 0;
+        quantityLabel.textContent = quantity;
+      });
+    }
+
+    function renderCartItems(rows) {
+      cartItems.replaceChildren();
+      rows.forEach((item) => {
+        const row = document.createElement('article');
+        row.className = 'cart-item';
+        row.innerHTML = `
+          <div>
+            <h3></h3>
+            <p></p>
+          </div>
+          <strong></strong>
+          <div class="quantity-control">
+            <button type="button" data-cart-decrease="${item.slug}" aria-label="Decrease ${item.name}">-</button>
+            <span>${item.quantity}</span>
+            <button type="button" data-cart-increase="${item.slug}" aria-label="Increase ${item.name}">+</button>
+          </div>
+        `;
+        row.querySelector('h3').textContent = item.name;
+        row.querySelector('p').textContent = item.originalName;
+        row.querySelector('strong').textContent = formatMoney(item.subtotal);
+        cartItems.append(row);
+      });
+    }
+
+    function renderCart() {
+      const rows = getCartRows();
+      const { count, total } = getCartSummary();
+
+      cartButtonCount.textContent = itemLabel(count);
+      cartButtonTotal.textContent = formatMoney(total);
+      cartTotal.textContent = formatMoney(total);
+      cartEmpty.hidden = rows.length !== 0;
+      cartItems.hidden = rows.length === 0;
+      cartClear.disabled = rows.length === 0;
+
+      renderCardControls();
+      renderCartItems(rows);
+    }
+
+    function openCart() {
+      cartDrawer.hidden = false;
+      cartDrawer.classList.add('open');
+      cartDrawer.setAttribute('aria-hidden', 'false');
+      cartBackdrop.hidden = false;
+      cartClose.focus();
+    }
+
+    function closeCart() {
+      cartDrawer.classList.remove('open');
+      cartDrawer.setAttribute('aria-hidden', 'true');
+      cartDrawer.hidden = true;
+      cartBackdrop.hidden = true;
+      cartButton.focus();
+    }
 
     function update() {
       const query = searchInput.value.trim().toLowerCase();
@@ -932,7 +1370,30 @@ def write_js():
     });
 
     searchInput.addEventListener('input', update);
+    document.addEventListener('click', (event) => {
+      const addButton = event.target.closest('[data-cart-add]');
+      const increaseButton = event.target.closest('[data-cart-increase]');
+      const decreaseButton = event.target.closest('[data-cart-decrease]');
+
+      if (addButton) increaseItem(addButton.dataset.cartAdd);
+      if (increaseButton) increaseItem(increaseButton.dataset.cartIncrease);
+      if (decreaseButton) decreaseItem(decreaseButton.dataset.cartDecrease);
+    });
+
+    cartButton.addEventListener('click', openCart);
+    cartClose.addEventListener('click', closeCart);
+    cartBackdrop.addEventListener('click', closeCart);
+    cartClear.addEventListener('click', () => {
+      cart = {};
+      saveCart();
+      renderCart();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && cartDrawer.classList.contains('open')) closeCart();
+    });
+
     update();
+    renderCart();
     """
     (ROOT / "app.js").write_text(textwrap.dedent(js).strip() + "\n", encoding="utf-8")
 
@@ -940,7 +1401,7 @@ def write_js():
 def write_readme():
     readme = f"""# Montimar Mierlo Visual Menu
 
-A practical English visual menu for Montimar Mierlo. It includes every listed menu entry from the public menu page, translated descriptions, prices, and one image per dish.
+A practical English visual menu for Montimar Mierlo. It includes every listed menu entry from the public menu page, translated descriptions, prices, one image per dish, and a local cart for building an order summary.
 
 Source menu: {MENU_SOURCE}
 
@@ -953,6 +1414,8 @@ Open `index.html` in a browser, or serve the folder with:
 ```bash
 python3 -m http.server 8000
 ```
+
+The cart is stored only in your browser with the `montimar-cart-v1` localStorage key. It does not submit orders or send network requests.
 
 ## Regenerate
 

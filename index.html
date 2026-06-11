@@ -36,6 +36,11 @@
 <button class="filter-button" type="button" data-category="Kids">Kids</button>
 <button class="filter-button" type="button" data-category="Coffee">Coffee</button>
     </div>
+    <button class="cart-button" id="cart-button" type="button" aria-haspopup="dialog" aria-controls="cart-drawer">
+      <span>Cart</span>
+      <strong id="cart-button-count">0 items</strong>
+      <span id="cart-button-total">EUR 0.00</span>
+    </button>
   </nav>
 
   <main>
@@ -47,7 +52,7 @@
               </div>
               <div class="dish-grid">
 
-                <article class="dish-card" data-category="Starters" data-search="bread &amp; herb butter brood &amp; boter pp fresh baked roll with herb butter">
+                <article class="dish-card" data-slug="bread-and-herb-butter" data-name="Bread &amp; herb butter" data-original-name="Brood &amp; boter pp" data-price="1.20" data-category="Starters" data-search="bread &amp; herb butter brood &amp; boter pp fresh baked roll with herb butter">
                   <a class="dish-image-link" href="https://www.bakingrecipesjoy.com/soft-garlic-bread-rolls-with-herb-butter/" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/bread-and-herb-butter.jpg" alt="Bread &amp; herb butter">
                   </a>
@@ -59,10 +64,18 @@
                     <p class="original-name">Brood &amp; boter pp</p>
                     <p class="description">Fresh baked roll with herb butter</p>
                     <p class="source-line">Photo: <a href="https://www.bakingrecipesjoy.com/soft-garlic-bread-rolls-with-herb-butter/" target="_blank" rel="noreferrer">Soft Garlic Bread Rolls with Herb Butter - Homemade Recipe</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Bread &amp; herb butter">
+                      <button class="add-button" type="button" data-cart-add="bread-and-herb-butter">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="bread-and-herb-butter" hidden>
+                        <button type="button" data-cart-decrease="bread-and-herb-butter" aria-label="Decrease Bread &amp; herb butter">-</button>
+                        <span data-cart-quantity="bread-and-herb-butter">0</span>
+                        <button type="button" data-cart-increase="bread-and-herb-butter" aria-label="Increase Bread &amp; herb butter">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Starters" data-search="beef carpaccio carpaccio thin-sliced beef fillet with truffle mayonnaise, pine nuts, arugula and parmesan">
+                <article class="dish-card" data-slug="beef-carpaccio" data-name="Beef carpaccio" data-original-name="Carpaccio" data-price="8.95" data-category="Starters" data-search="beef carpaccio carpaccio thin-sliced beef fillet with truffle mayonnaise, pine nuts, arugula and parmesan">
                   <a class="dish-image-link" href="https://www.montimar.nl/wp-content/uploads/2019/01/10.jpg" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/beef-carpaccio.jpg" alt="Beef carpaccio">
                   </a>
@@ -74,10 +87,18 @@
                     <p class="original-name">Carpaccio</p>
                     <p class="description">Thin-sliced beef fillet with truffle mayonnaise, pine nuts, arugula and Parmesan</p>
                     <p class="source-line">Photo: <a href="https://www.montimar.nl/wp-content/uploads/2019/01/10.jpg" target="_blank" rel="noreferrer">Montimar official beef carpaccio photo</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Beef carpaccio">
+                      <button class="add-button" type="button" data-cart-add="beef-carpaccio">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="beef-carpaccio" hidden>
+                        <button type="button" data-cart-decrease="beef-carpaccio" aria-label="Decrease Beef carpaccio">-</button>
+                        <span data-cart-quantity="beef-carpaccio">0</span>
+                        <button type="button" data-cart-increase="beef-carpaccio" aria-label="Increase Beef carpaccio">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Starters" data-search="garlic shrimp pil pil gambas pil pil sizzling shrimp in garlic-pepper oil, served with aioli and lemon">
+                <article class="dish-card" data-slug="garlic-shrimp-pil-pil" data-name="Garlic shrimp pil pil" data-original-name="Gambas Pil Pil" data-price="8.25" data-category="Starters" data-search="garlic shrimp pil pil gambas pil pil sizzling shrimp in garlic-pepper oil, served with aioli and lemon">
                   <a class="dish-image-link" href="https://www.montimar.nl//wp-content/uploads/2019/01/33.jpg" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/garlic-shrimp-pil-pil.jpg" alt="Garlic shrimp pil pil">
                   </a>
@@ -89,10 +110,18 @@
                     <p class="original-name">Gambas Pil Pil</p>
                     <p class="description">Sizzling shrimp in garlic-pepper oil, served with aioli and lemon</p>
                     <p class="source-line">Photo: <a href="https://www.montimar.nl//wp-content/uploads/2019/01/33.jpg" target="_blank" rel="noreferrer">Montimar official shrimp dish photo</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Garlic shrimp pil pil">
+                      <button class="add-button" type="button" data-cart-add="garlic-shrimp-pil-pil">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="garlic-shrimp-pil-pil" hidden>
+                        <button type="button" data-cart-decrease="garlic-shrimp-pil-pil" aria-label="Decrease Garlic shrimp pil pil">-</button>
+                        <span data-cart-quantity="garlic-shrimp-pil-pil">0</span>
+                        <button type="button" data-cart-increase="garlic-shrimp-pil-pil" aria-label="Increase Garlic shrimp pil pil">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Starters" data-search="crispy tuna tacos taco de atun crispy tacos with avocado cream and soy-marinated tuna tartare">
+                <article class="dish-card" data-slug="crispy-tuna-tacos" data-name="Crispy tuna tacos" data-original-name="Taco de atun" data-price="7.25" data-category="Starters" data-search="crispy tuna tacos taco de atun crispy tacos with avocado cream and soy-marinated tuna tartare">
                   <a class="dish-image-link" href="https://www.recipesbycallie.com/spicy-tuna-tartare-wonton-tacos-recipe/" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/crispy-tuna-tacos.jpg" alt="Crispy tuna tacos">
                   </a>
@@ -104,10 +133,18 @@
                     <p class="original-name">Taco de atun</p>
                     <p class="description">Crispy tacos with avocado cream and soy-marinated tuna tartare</p>
                     <p class="source-line">Photo: <a href="https://www.recipesbycallie.com/spicy-tuna-tartare-wonton-tacos-recipe/" target="_blank" rel="noreferrer">Delicious Spicy Tuna Tartare Wonton Tacos Recipe You&#x27;ll Love - Recipes ...</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Crispy tuna tacos">
+                      <button class="add-button" type="button" data-cart-add="crispy-tuna-tacos">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="crispy-tuna-tacos" hidden>
+                        <button type="button" data-cart-decrease="crispy-tuna-tacos" aria-label="Decrease Crispy tuna tacos">-</button>
+                        <span data-cart-quantity="crispy-tuna-tacos">0</span>
+                        <button type="button" data-cart-increase="crispy-tuna-tacos" aria-label="Increase Crispy tuna tacos">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Starters" data-search="tempura chicken salad pollo crujiente tempura chicken thigh salad with mango chutney, yogurt dressing and pickled cucumber and carrot">
+                <article class="dish-card" data-slug="tempura-chicken-salad" data-name="Tempura chicken salad" data-original-name="Pollo Crujiente" data-price="7.45" data-category="Starters" data-search="tempura chicken salad pollo crujiente tempura chicken thigh salad with mango chutney, yogurt dressing and pickled cucumber and carrot">
                   <a class="dish-image-link" href="https://bakemama.com/crispy-chicken-salad/" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/tempura-chicken-salad.jpg" alt="Tempura chicken salad">
                   </a>
@@ -119,10 +156,18 @@
                     <p class="original-name">Pollo Crujiente</p>
                     <p class="description">Tempura chicken thigh salad with mango chutney, yogurt dressing and pickled cucumber and carrot</p>
                     <p class="source-line">Photo: <a href="https://bakemama.com/crispy-chicken-salad/" target="_blank" rel="noreferrer">Crispy Chicken Salad - The Ultimate Delicious Recipe</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Tempura chicken salad">
+                      <button class="add-button" type="button" data-cart-add="tempura-chicken-salad">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="tempura-chicken-salad" hidden>
+                        <button type="button" data-cart-decrease="tempura-chicken-salad" aria-label="Decrease Tempura chicken salad">-</button>
+                        <span data-cart-quantity="tempura-chicken-salad">0</span>
+                        <button type="button" data-cart-increase="tempura-chicken-salad" aria-label="Increase Tempura chicken salad">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Starters" data-search="escargots in garlic butter escargots eight vineyard snails in herb butter and garlic, served with bread">
+                <article class="dish-card" data-slug="escargots-in-garlic-butter" data-name="Escargots in garlic butter" data-original-name="Escargots" data-price="8.55" data-category="Starters" data-search="escargots in garlic butter escargots eight vineyard snails in herb butter and garlic, served with bread">
                   <a class="dish-image-link" href="https://commons.wikimedia.org/wiki/File%3ABurgundy_escargots%2C_garlic%2C_parsley%2C_butter.jpg" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/escargots-in-garlic-butter.jpg" alt="Escargots in garlic butter">
                   </a>
@@ -134,10 +179,18 @@
                     <p class="original-name">Escargots</p>
                     <p class="description">Eight vineyard snails in herb butter and garlic, served with bread</p>
                     <p class="source-line">Photo: <a href="https://commons.wikimedia.org/wiki/File%3ABurgundy_escargots%2C_garlic%2C_parsley%2C_butter.jpg" target="_blank" rel="noreferrer">Burgundy escargots, garlic, parsley, butter.jpg</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Escargots in garlic butter">
+                      <button class="add-button" type="button" data-cart-add="escargots-in-garlic-butter">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="escargots-in-garlic-butter" hidden>
+                        <button type="button" data-cart-decrease="escargots-in-garlic-butter" aria-label="Decrease Escargots in garlic butter">-</button>
+                        <span data-cart-quantity="escargots-in-garlic-butter">0</span>
+                        <button type="button" data-cart-increase="escargots-in-garlic-butter" aria-label="Increase Escargots in garlic butter">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Starters" data-search="mixed tapas tasting tapas variadas small tasting of asparagus soup, shrimp pil pil and smoked salmon with fennel salad">
+                <article class="dish-card" data-slug="mixed-tapas-tasting" data-name="Mixed tapas tasting" data-original-name="Tapas variadas" data-price="6.85" data-category="Starters" data-search="mixed tapas tasting tapas variadas small tasting of asparagus soup, shrimp pil pil and smoked salmon with fennel salad">
                   <a class="dish-image-link" href="https://www.fishtalescafe.com/seafood-trio-tapas-small-plates-for-big-seafood-flavor/" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/mixed-tapas-tasting.jpg" alt="Mixed tapas tasting">
                   </a>
@@ -149,10 +202,18 @@
                     <p class="original-name">Tapas variadas</p>
                     <p class="description">Small tasting of asparagus soup, shrimp pil pil and smoked salmon with fennel salad</p>
                     <p class="source-line">Photo: <a href="https://www.fishtalescafe.com/seafood-trio-tapas-small-plates-for-big-seafood-flavor/" target="_blank" rel="noreferrer">Seafood Trio Tapas: Small Plates for Big Seafood Flavor - Fish Tales Cafe</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Mixed tapas tasting">
+                      <button class="add-button" type="button" data-cart-add="mixed-tapas-tasting">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="mixed-tapas-tasting" hidden>
+                        <button type="button" data-cart-decrease="mixed-tapas-tasting" aria-label="Decrease Mixed tapas tasting">-</button>
+                        <span data-cart-quantity="mixed-tapas-tasting">0</span>
+                        <button type="button" data-cart-increase="mixed-tapas-tasting" aria-label="Increase Mixed tapas tasting">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Starters" data-search="spring sushi rice bowl primavera marinated sushi rice with roasted asparagus, avocado, pickled cucumber and carrot, edamame and paprika mayonnaise">
+                <article class="dish-card" data-slug="spring-sushi-rice-bowl" data-name="Spring sushi rice bowl" data-original-name="Primavera" data-price="6.45" data-category="Starters" data-search="spring sushi rice bowl primavera marinated sushi rice with roasted asparagus, avocado, pickled cucumber and carrot, edamame and paprika mayonnaise">
                   <a class="dish-image-link" href="https://foodie-haven.com/no-bake-sushi-bowls/" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/spring-sushi-rice-bowl.jpg" alt="Spring sushi rice bowl">
                   </a>
@@ -164,10 +225,18 @@
                     <p class="original-name">Primavera</p>
                     <p class="description">Marinated sushi rice with roasted asparagus, avocado, pickled cucumber and carrot, edamame and paprika mayonnaise</p>
                     <p class="source-line">Photo: <a href="https://foodie-haven.com/no-bake-sushi-bowls/" target="_blank" rel="noreferrer">10 Easy No-Bake Sushi Bowls for a Quick Dinner Fix - Foodie Haven</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Spring sushi rice bowl">
+                      <button class="add-button" type="button" data-cart-add="spring-sushi-rice-bowl">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="spring-sushi-rice-bowl" hidden>
+                        <button type="button" data-cart-decrease="spring-sushi-rice-bowl" aria-label="Decrease Spring sushi rice bowl">-</button>
+                        <span data-cart-quantity="spring-sushi-rice-bowl">0</span>
+                        <button type="button" data-cart-increase="spring-sushi-rice-bowl" aria-label="Increase Spring sushi rice bowl">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Starters" data-search="provencal grilled vegetable salad provencal salad of grilled provencal vegetables, parmesan, pistou and tomato salsa">
+                <article class="dish-card" data-slug="provencal-grilled-vegetable-salad" data-name="Provencal grilled vegetable salad" data-original-name="Provencal" data-price="7.15" data-category="Starters" data-search="provencal grilled vegetable salad provencal salad of grilled provencal vegetables, parmesan, pistou and tomato salsa">
                   <a class="dish-image-link" href="https://madebykiara.com/grilled-vegetable-salad/" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/provencal-grilled-vegetable-salad.jpg" alt="Provencal grilled vegetable salad">
                   </a>
@@ -179,10 +248,18 @@
                     <p class="original-name">Provencal</p>
                     <p class="description">Salad of grilled Provencal vegetables, Parmesan, pistou and tomato salsa</p>
                     <p class="source-line">Photo: <a href="https://madebykiara.com/grilled-vegetable-salad/" target="_blank" rel="noreferrer">Grilled Vegetable Salad</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Provencal grilled vegetable salad">
+                      <button class="add-button" type="button" data-cart-add="provencal-grilled-vegetable-salad">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="provencal-grilled-vegetable-salad" hidden>
+                        <button type="button" data-cart-decrease="provencal-grilled-vegetable-salad" aria-label="Decrease Provencal grilled vegetable salad">-</button>
+                        <span data-cart-quantity="provencal-grilled-vegetable-salad">0</span>
+                        <button type="button" data-cart-increase="provencal-grilled-vegetable-salad" aria-label="Increase Provencal grilled vegetable salad">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Starters" data-search="smoked salmon and fennel de la costa smoked salmon fillet with fresh fennel salad and citrus mayonnaise">
+                <article class="dish-card" data-slug="smoked-salmon-and-fennel" data-name="Smoked salmon and fennel" data-original-name="De la costa" data-price="7.95" data-category="Starters" data-search="smoked salmon and fennel de la costa smoked salmon fillet with fresh fennel salad and citrus mayonnaise">
                   <a class="dish-image-link" href="https://ellerepublic.de/en/salad-with-smoked-salmon/" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/smoked-salmon-and-fennel.jpg" alt="Smoked salmon and fennel">
                   </a>
@@ -194,10 +271,18 @@
                     <p class="original-name">De la costa</p>
                     <p class="description">Smoked salmon fillet with fresh fennel salad and citrus mayonnaise</p>
                     <p class="source-line">Photo: <a href="https://ellerepublic.de/en/salad-with-smoked-salmon/" target="_blank" rel="noreferrer">Salad with Smoked Salmon, Orange &amp; Fennel | Recipe | Elle Republic</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Smoked salmon and fennel">
+                      <button class="add-button" type="button" data-cart-add="smoked-salmon-and-fennel">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="smoked-salmon-and-fennel" hidden>
+                        <button type="button" data-cart-decrease="smoked-salmon-and-fennel" aria-label="Decrease Smoked salmon and fennel">-</button>
+                        <span data-cart-quantity="smoked-salmon-and-fennel">0</span>
+                        <button type="button" data-cart-increase="smoked-salmon-and-fennel" aria-label="Increase Smoked salmon and fennel">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Starters" data-search="white asparagus with ham and egg asperges white asparagus with farmhouse ham, farm egg and hollandaise sauce; vegetarian option available">
+                <article class="dish-card" data-slug="white-asparagus-with-ham-and-egg" data-name="White asparagus with ham and egg" data-original-name="Asperges" data-price="7.75" data-category="Starters" data-search="white asparagus with ham and egg asperges white asparagus with farmhouse ham, farm egg and hollandaise sauce; vegetarian option available">
                   <a class="dish-image-link" href="https://commons.wikimedia.org/wiki/File:Asparagus_NL.jpg" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/white-asparagus-with-ham-and-egg.jpg" alt="White asparagus with ham and egg">
                   </a>
@@ -209,6 +294,14 @@
                     <p class="original-name">Asperges</p>
                     <p class="description">White asparagus with farmhouse ham, farm egg and hollandaise sauce; vegetarian option available</p>
                     <p class="source-line">Photo: <a href="https://commons.wikimedia.org/wiki/File:Asparagus_NL.jpg" target="_blank" rel="noreferrer">Asparagus NL.jpg</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for White asparagus with ham and egg">
+                      <button class="add-button" type="button" data-cart-add="white-asparagus-with-ham-and-egg">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="white-asparagus-with-ham-and-egg" hidden>
+                        <button type="button" data-cart-decrease="white-asparagus-with-ham-and-egg" aria-label="Decrease White asparagus with ham and egg">-</button>
+                        <span data-cart-quantity="white-asparagus-with-ham-and-egg">0</span>
+                        <button type="button" data-cart-increase="white-asparagus-with-ham-and-egg" aria-label="Increase White asparagus with ham and egg">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
@@ -222,7 +315,7 @@
               </div>
               <div class="dish-grid">
 
-                <article class="dish-card" data-category="Soups" data-search="provencal tomato soup provencaalse tomaat hearty vine tomato soup with basil and cream">
+                <article class="dish-card" data-slug="provencal-tomato-soup" data-name="Provencal tomato soup" data-original-name="Provencaalse tomaat" data-price="3.15" data-category="Soups" data-search="provencal tomato soup provencaalse tomaat hearty vine tomato soup with basil and cream">
                   <a class="dish-image-link" href="https://commons.wikimedia.org/wiki/File:Basil_and_Organic_Tomato_Soup.jpg" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/provencal-tomato-soup.jpg" alt="Provencal tomato soup">
                   </a>
@@ -234,10 +327,18 @@
                     <p class="original-name">Provencaalse tomaat</p>
                     <p class="description">Hearty vine tomato soup with basil and cream</p>
                     <p class="source-line">Photo: <a href="https://commons.wikimedia.org/wiki/File:Basil_and_Organic_Tomato_Soup.jpg" target="_blank" rel="noreferrer">Basil and Organic Tomato Soup.jpg</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Provencal tomato soup">
+                      <button class="add-button" type="button" data-cart-add="provencal-tomato-soup">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="provencal-tomato-soup" hidden>
+                        <button type="button" data-cart-decrease="provencal-tomato-soup" aria-label="Decrease Provencal tomato soup">-</button>
+                        <span data-cart-quantity="provencal-tomato-soup">0</span>
+                        <button type="button" data-cart-increase="provencal-tomato-soup" aria-label="Increase Provencal tomato soup">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Soups" data-search="creamy asparagus soup aspergesoep creamy asparagus soup in the brabant style">
+                <article class="dish-card" data-slug="creamy-asparagus-soup" data-name="Creamy asparagus soup" data-original-name="Aspergesoep" data-price="4.55" data-category="Soups" data-search="creamy asparagus soup aspergesoep creamy asparagus soup in the brabant style">
                   <a class="dish-image-link" href="https://commons.wikimedia.org/wiki/File%3AASparagus_soup001.jpg" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/creamy-asparagus-soup.jpg" alt="Creamy asparagus soup">
                   </a>
@@ -249,10 +350,18 @@
                     <p class="original-name">Aspergesoep</p>
                     <p class="description">Creamy asparagus soup in the Brabant style</p>
                     <p class="source-line">Photo: <a href="https://commons.wikimedia.org/wiki/File%3AASparagus_soup001.jpg" target="_blank" rel="noreferrer">ASparagus soup001.jpg</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Creamy asparagus soup">
+                      <button class="add-button" type="button" data-cart-add="creamy-asparagus-soup">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="creamy-asparagus-soup" hidden>
+                        <button type="button" data-cart-decrease="creamy-asparagus-soup" aria-label="Decrease Creamy asparagus soup">-</button>
+                        <span data-cart-quantity="creamy-asparagus-soup">0</span>
+                        <button type="button" data-cart-increase="creamy-asparagus-soup" aria-label="Increase Creamy asparagus soup">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Soups" data-search="basque seafood soup sopa de basque northern spanish fish soup with fish fillets, shellfish and crustaceans">
+                <article class="dish-card" data-slug="basque-seafood-soup" data-name="Basque seafood soup" data-original-name="Sopa de Basque" data-price="7.15" data-category="Soups" data-search="basque seafood soup sopa de basque northern spanish fish soup with fish fillets, shellfish and crustaceans">
                   <a class="dish-image-link" href="https://www.food.com/recipe/basque-fish-soup-284365" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/basque-seafood-soup.jpg" alt="Basque seafood soup">
                   </a>
@@ -264,6 +373,14 @@
                     <p class="original-name">Sopa de Basque</p>
                     <p class="description">Northern Spanish fish soup with fish fillets, shellfish and crustaceans</p>
                     <p class="source-line">Photo: <a href="https://www.food.com/recipe/basque-fish-soup-284365" target="_blank" rel="noreferrer">Basque Fish Soup Recipe - Food.com</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Basque seafood soup">
+                      <button class="add-button" type="button" data-cart-add="basque-seafood-soup">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="basque-seafood-soup" hidden>
+                        <button type="button" data-cart-decrease="basque-seafood-soup" aria-label="Decrease Basque seafood soup">-</button>
+                        <span data-cart-quantity="basque-seafood-soup">0</span>
+                        <button type="button" data-cart-increase="basque-seafood-soup" aria-label="Increase Basque seafood soup">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
@@ -277,7 +394,7 @@
               </div>
               <div class="dish-grid">
 
-                <article class="dish-card" data-category="Meat" data-search="asian grilled chicken pollo asiatico grilled chicken breast with crispy chicken dumplings and soy, sesame and chili sauce">
+                <article class="dish-card" data-slug="asian-grilled-chicken" data-name="Asian grilled chicken" data-original-name="Pollo Asiatico" data-price="14.20" data-category="Meat" data-search="asian grilled chicken pollo asiatico grilled chicken breast with crispy chicken dumplings and soy, sesame and chili sauce">
                   <a class="dish-image-link" href="https://www.snohimit.com/menu" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/asian-grilled-chicken.jpg" alt="Asian grilled chicken">
                   </a>
@@ -289,10 +406,18 @@
                     <p class="original-name">Pollo Asiatico</p>
                     <p class="description">Grilled chicken breast with crispy chicken dumplings and soy, sesame and chili sauce</p>
                     <p class="source-line">Photo: <a href="https://www.snohimit.com/menu" target="_blank" rel="noreferrer">Chicken &amp; Gyoza - Himitsu Teriyaki</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Asian grilled chicken">
+                      <button class="add-button" type="button" data-cart-add="asian-grilled-chicken">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="asian-grilled-chicken" hidden>
+                        <button type="button" data-cart-decrease="asian-grilled-chicken" aria-label="Decrease Asian grilled chicken">-</button>
+                        <span data-cart-quantity="asian-grilled-chicken">0</span>
+                        <button type="button" data-cart-increase="asian-grilled-chicken" aria-label="Increase Asian grilled chicken">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Meat" data-search="lamb duo cordero pan-fried lamb entrecote with lamb mince roll, serrano ham and aubergine, served with lamb jus">
+                <article class="dish-card" data-slug="lamb-duo" data-name="Lamb duo" data-original-name="Cordero" data-price="18.95" data-category="Meat" data-search="lamb duo cordero pan-fried lamb entrecote with lamb mince roll, serrano ham and aubergine, served with lamb jus">
                   <a class="dish-image-link" href="https://www.foodservice.aussiebeefandlamb.com/recipes/foodservice-recipes/lamb/seared-lamb-medallions-with-almond-and-mint-pea-cream-and-baby-vegetables/" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/lamb-duo.jpg" alt="Lamb duo">
                   </a>
@@ -304,10 +429,18 @@
                     <p class="original-name">Cordero</p>
                     <p class="description">Pan-fried lamb entrecote with lamb mince roll, serrano ham and aubergine, served with lamb jus</p>
                     <p class="source-line">Photo: <a href="https://www.foodservice.aussiebeefandlamb.com/recipes/foodservice-recipes/lamb/seared-lamb-medallions-with-almond-and-mint-pea-cream-and-baby-vegetables/" target="_blank" rel="noreferrer">Seared Lamb Medallions With Almond And Mint Pea Cream And Baby ...</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Lamb duo">
+                      <button class="add-button" type="button" data-cart-add="lamb-duo">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="lamb-duo" hidden>
+                        <button type="button" data-cart-decrease="lamb-duo" aria-label="Decrease Lamb duo">-</button>
+                        <span data-cart-quantity="lamb-duo">0</span>
+                        <button type="button" data-cart-increase="lamb-duo" aria-label="Increase Lamb duo">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Meat" data-search="steak and shrimp mont i mar black angus steak with shrimp and bearnaise sauce">
+                <article class="dish-card" data-slug="steak-and-shrimp" data-name="Steak and shrimp" data-original-name="Mont i Mar" data-price="18.80" data-category="Meat" data-search="steak and shrimp mont i mar black angus steak with shrimp and bearnaise sauce">
                   <a class="dish-image-link" href="https://commons.wikimedia.org/wiki/File%3ASurf_and_Turf_Australian.jpg" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/steak-and-shrimp.jpg" alt="Steak and shrimp">
                   </a>
@@ -319,10 +452,18 @@
                     <p class="original-name">Mont i Mar</p>
                     <p class="description">Black Angus steak with shrimp and bearnaise sauce</p>
                     <p class="source-line">Photo: <a href="https://commons.wikimedia.org/wiki/File%3ASurf_and_Turf_Australian.jpg" target="_blank" rel="noreferrer">Surf and Turf Australian.jpg</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Steak and shrimp">
+                      <button class="add-button" type="button" data-cart-add="steak-and-shrimp">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="steak-and-shrimp" hidden>
+                        <button type="button" data-cart-decrease="steak-and-shrimp" aria-label="Decrease Steak and shrimp">-</button>
+                        <span data-cart-quantity="steak-and-shrimp">0</span>
+                        <button type="button" data-cart-increase="steak-and-shrimp" aria-label="Increase Steak and shrimp">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Meat" data-search="pork tenderloin with serrano iberico roasted pork tenderloin with serrano ham and honey-thyme sauce">
+                <article class="dish-card" data-slug="pork-tenderloin-with-serrano" data-name="Pork tenderloin with serrano" data-original-name="Iberico" data-price="14.35" data-category="Meat" data-search="pork tenderloin with serrano iberico roasted pork tenderloin with serrano ham and honey-thyme sauce">
                   <a class="dish-image-link" href="https://recipessin.com/creamy-pork-tenderloin-medallions/" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/pork-tenderloin-with-serrano.jpg" alt="Pork tenderloin with serrano">
                   </a>
@@ -334,10 +475,18 @@
                     <p class="original-name">Iberico</p>
                     <p class="description">Roasted pork tenderloin with serrano ham and honey-thyme sauce</p>
                     <p class="source-line">Photo: <a href="https://recipessin.com/creamy-pork-tenderloin-medallions/" target="_blank" rel="noreferrer">Creamy Pork Tenderloin Medallions</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Pork tenderloin with serrano">
+                      <button class="add-button" type="button" data-cart-add="pork-tenderloin-with-serrano">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="pork-tenderloin-with-serrano" hidden>
+                        <button type="button" data-cart-decrease="pork-tenderloin-with-serrano" aria-label="Decrease Pork tenderloin with serrano">-</button>
+                        <span data-cart-quantity="pork-tenderloin-with-serrano">0</span>
+                        <button type="button" data-cart-increase="pork-tenderloin-with-serrano" aria-label="Increase Pork tenderloin with serrano">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Meat" data-search="black angus rump steak bordelaise steak bordelaise grilled black angus rump steak with red wine sauce">
+                <article class="dish-card" data-slug="black-angus-rump-steak-bordelaise" data-name="Black Angus rump steak Bordelaise" data-original-name="Steak Bordelaise" data-price="18.95" data-category="Meat" data-search="black angus rump steak bordelaise steak bordelaise grilled black angus rump steak with red wine sauce">
                   <a class="dish-image-link" href="https://simplyfamilyrecipes.com/rump-steak-recipes/" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/black-angus-rump-steak-bordelaise.jpg" alt="Black Angus rump steak Bordelaise">
                   </a>
@@ -349,10 +498,18 @@
                     <p class="original-name">Steak Bordelaise</p>
                     <p class="description">Grilled Black Angus rump steak with red wine sauce</p>
                     <p class="source-line">Photo: <a href="https://simplyfamilyrecipes.com/rump-steak-recipes/" target="_blank" rel="noreferrer">17 Delicious Rump Steak Recipes Amazing - Simply Family Recipes</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Black Angus rump steak Bordelaise">
+                      <button class="add-button" type="button" data-cart-add="black-angus-rump-steak-bordelaise">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="black-angus-rump-steak-bordelaise" hidden>
+                        <button type="button" data-cart-decrease="black-angus-rump-steak-bordelaise" aria-label="Decrease Black Angus rump steak Bordelaise">-</button>
+                        <span data-cart-quantity="black-angus-rump-steak-bordelaise">0</span>
+                        <button type="button" data-cart-increase="black-angus-rump-steak-bordelaise" aria-label="Increase Black Angus rump steak Bordelaise">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Meat" data-search="tenderloin with pepper sauce tournedos pan-fried beef tenderloin with pepper sauce">
+                <article class="dish-card" data-slug="tenderloin-with-pepper-sauce" data-name="Tenderloin with pepper sauce" data-original-name="Tournedos" data-price="24.45" data-category="Meat" data-search="tenderloin with pepper sauce tournedos pan-fried beef tenderloin with pepper sauce">
                   <a class="dish-image-link" href="https://happymuncher.com/extravagant-beef-tournedos-recipe-tournedos-rossini/" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/tenderloin-with-pepper-sauce.jpg" alt="Tenderloin with pepper sauce">
                   </a>
@@ -364,6 +521,14 @@
                     <p class="original-name">Tournedos</p>
                     <p class="description">Pan-fried beef tenderloin with pepper sauce</p>
                     <p class="source-line">Photo: <a href="https://happymuncher.com/extravagant-beef-tournedos-recipe-tournedos-rossini/" target="_blank" rel="noreferrer">Extravagant Beef Tournedos Recipe (Tournedos Rossini) - Happy Muncher</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Tenderloin with pepper sauce">
+                      <button class="add-button" type="button" data-cart-add="tenderloin-with-pepper-sauce">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="tenderloin-with-pepper-sauce" hidden>
+                        <button type="button" data-cart-decrease="tenderloin-with-pepper-sauce" aria-label="Decrease Tenderloin with pepper sauce">-</button>
+                        <span data-cart-quantity="tenderloin-with-pepper-sauce">0</span>
+                        <button type="button" data-cart-increase="tenderloin-with-pepper-sauce" aria-label="Increase Tenderloin with pepper sauce">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
@@ -377,7 +542,7 @@
               </div>
               <div class="dish-grid">
 
-                <article class="dish-card" data-category="Fish" data-search="pan-fried plaice el mar fried plaice fillet with browned butter, capers and lemon sauce">
+                <article class="dish-card" data-slug="pan-fried-plaice" data-name="Pan-fried plaice" data-original-name="El Mar" data-price="16.40" data-category="Fish" data-search="pan-fried plaice el mar fried plaice fillet with browned butter, capers and lemon sauce">
                   <a class="dish-image-link" href="https://www.reddit.com/r/RateMyPlate/comments/unvlnc/pan_fried_plaice_with_a_lemon_and_caper_butter/" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/pan-fried-plaice.jpg" alt="Pan-fried plaice">
                   </a>
@@ -389,10 +554,18 @@
                     <p class="original-name">El Mar</p>
                     <p class="description">Fried plaice fillet with browned butter, capers and lemon sauce</p>
                     <p class="source-line">Photo: <a href="https://www.reddit.com/r/RateMyPlate/comments/unvlnc/pan_fried_plaice_with_a_lemon_and_caper_butter/" target="_blank" rel="noreferrer">Pan fried plaice with a lemon and caper butter served with steamed ...</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Pan-fried plaice">
+                      <button class="add-button" type="button" data-cart-add="pan-fried-plaice">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="pan-fried-plaice" hidden>
+                        <button type="button" data-cart-decrease="pan-fried-plaice" aria-label="Decrease Pan-fried plaice">-</button>
+                        <span data-cart-quantity="pan-fried-plaice">0</span>
+                        <button type="button" data-cart-increase="pan-fried-plaice" aria-label="Increase Pan-fried plaice">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Fish" data-search="salmon with beurre blanc salmon skin-on fried salmon fillet with beurre blanc sauce and herb oil">
+                <article class="dish-card" data-slug="salmon-with-beurre-blanc" data-name="Salmon with beurre blanc" data-original-name="Salmon" data-price="17.40" data-category="Fish" data-search="salmon with beurre blanc salmon skin-on fried salmon fillet with beurre blanc sauce and herb oil">
                   <a class="dish-image-link" href="https://www.indulgencebyrachael.com/post/french-herb-crusted-salmon-with-lemon-beurre-blanc" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/salmon-with-beurre-blanc.jpg" alt="Salmon with beurre blanc">
                   </a>
@@ -404,10 +577,18 @@
                     <p class="original-name">Salmon</p>
                     <p class="description">Skin-on fried salmon fillet with beurre blanc sauce and herb oil</p>
                     <p class="source-line">Photo: <a href="https://www.indulgencebyrachael.com/post/french-herb-crusted-salmon-with-lemon-beurre-blanc" target="_blank" rel="noreferrer">French Herb-Crusted Salmon with Lemon Beurre Blanc</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Salmon with beurre blanc">
+                      <button class="add-button" type="button" data-cart-add="salmon-with-beurre-blanc">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="salmon-with-beurre-blanc" hidden>
+                        <button type="button" data-cart-decrease="salmon-with-beurre-blanc" aria-label="Decrease Salmon with beurre blanc">-</button>
+                        <span data-cart-quantity="salmon-with-beurre-blanc">0</span>
+                        <button type="button" data-cart-increase="salmon-with-beurre-blanc" aria-label="Increase Salmon with beurre blanc">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Fish" data-search="cod bourride cabillaud bourride pan-fried cod fillet with white wine, fennel and tarragon sauce">
+                <article class="dish-card" data-slug="cod-bourride" data-name="Cod bourride" data-original-name="Cabillaud Bourride" data-price="16.95" data-category="Fish" data-search="cod bourride cabillaud bourride pan-fried cod fillet with white wine, fennel and tarragon sauce">
                   <a class="dish-image-link" href="https://www.chapmans-shop.co.uk/products/cod-fillets-in-white-wine-lemon-tarragon-sauce" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/cod-bourride.jpg" alt="Cod bourride">
                   </a>
@@ -419,10 +600,18 @@
                     <p class="original-name">Cabillaud Bourride</p>
                     <p class="description">Pan-fried cod fillet with white wine, fennel and tarragon sauce</p>
                     <p class="source-line">Photo: <a href="https://www.chapmans-shop.co.uk/products/cod-fillets-in-white-wine-lemon-tarragon-sauce" target="_blank" rel="noreferrer">Cod Fillets in White Wine, Lemon &amp; Tarragon Sauce - Chapman&#x27;s Seafoods</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Cod bourride">
+                      <button class="add-button" type="button" data-cart-add="cod-bourride">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="cod-bourride" hidden>
+                        <button type="button" data-cart-decrease="cod-bourride" aria-label="Decrease Cod bourride">-</button>
+                        <span data-cart-quantity="cod-bourride">0</span>
+                        <button type="button" data-cart-increase="cod-bourride" aria-label="Increase Cod bourride">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Fish" data-search="wok-fried black tiger shrimp gamba&#x27;s peeled black tiger shrimp wok-fried with garlic, pepper and soy-sesame marinade, served with chili mayonnaise">
+                <article class="dish-card" data-slug="wok-fried-black-tiger-shrimp" data-name="Wok-fried black tiger shrimp" data-original-name="Gamba&#x27;s" data-price="15.95" data-category="Fish" data-search="wok-fried black tiger shrimp gamba&#x27;s peeled black tiger shrimp wok-fried with garlic, pepper and soy-sesame marinade, served with chili mayonnaise">
                   <a class="dish-image-link" href="https://cravinghomecooked.com/asian-garlic-shrimp/" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/wok-fried-black-tiger-shrimp.jpg" alt="Wok-fried black tiger shrimp">
                   </a>
@@ -434,10 +623,18 @@
                     <p class="original-name">Gamba&#x27;s</p>
                     <p class="description">Peeled black tiger shrimp wok-fried with garlic, pepper and soy-sesame marinade, served with chili mayonnaise</p>
                     <p class="source-line">Photo: <a href="https://cravinghomecooked.com/asian-garlic-shrimp/" target="_blank" rel="noreferrer">Asian Garlic Shrimp - Craving Home Cooked</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Wok-fried black tiger shrimp">
+                      <button class="add-button" type="button" data-cart-add="wok-fried-black-tiger-shrimp">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="wok-fried-black-tiger-shrimp" hidden>
+                        <button type="button" data-cart-decrease="wok-fried-black-tiger-shrimp" aria-label="Decrease Wok-fried black tiger shrimp">-</button>
+                        <span data-cart-quantity="wok-fried-black-tiger-shrimp">0</span>
+                        <button type="button" data-cart-increase="wok-fried-black-tiger-shrimp" aria-label="Increase Wok-fried black tiger shrimp">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Fish" data-search="sea bream and shrimp dorade y gamba pan-fried sea bream fillet with shrimp and saffron-orange sauce">
+                <article class="dish-card" data-slug="sea-bream-and-shrimp" data-name="Sea bream and shrimp" data-original-name="Dorade y Gamba" data-price="16.25" data-category="Fish" data-search="sea bream and shrimp dorade y gamba pan-fried sea bream fillet with shrimp and saffron-orange sauce">
                   <a class="dish-image-link" href="https://bonapeti.com/recipes/r-192275-Grilled_Sea_Bream_Fillet_with_Shrimp_Sauce" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/sea-bream-and-shrimp.jpg" alt="Sea bream and shrimp">
                   </a>
@@ -449,6 +646,14 @@
                     <p class="original-name">Dorade y Gamba</p>
                     <p class="description">Pan-fried sea bream fillet with shrimp and saffron-orange sauce</p>
                     <p class="source-line">Photo: <a href="https://bonapeti.com/recipes/r-192275-Grilled_Sea_Bream_Fillet_with_Shrimp_Sauce" target="_blank" rel="noreferrer">Grilled Sea Bream Fillet with Shrimp Sauce - Recipe | Bonapeti.com</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Sea bream and shrimp">
+                      <button class="add-button" type="button" data-cart-add="sea-bream-and-shrimp">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="sea-bream-and-shrimp" hidden>
+                        <button type="button" data-cart-decrease="sea-bream-and-shrimp" aria-label="Decrease Sea bream and shrimp">-</button>
+                        <span data-cart-quantity="sea-bream-and-shrimp">0</span>
+                        <button type="button" data-cart-increase="sea-bream-and-shrimp" aria-label="Increase Sea bream and shrimp">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
@@ -462,7 +667,7 @@
               </div>
               <div class="dish-grid">
 
-                <article class="dish-card" data-category="Vegetarian" data-search="baked cannelloni pasta di mama oven-baked cannelloni filled with provencal vegetables and tomato sauce">
+                <article class="dish-card" data-slug="baked-cannelloni" data-name="Baked cannelloni" data-original-name="Pasta di mama" data-price="15.95" data-category="Vegetarian" data-search="baked cannelloni pasta di mama oven-baked cannelloni filled with provencal vegetables and tomato sauce">
                   <a class="dish-image-link" href="https://commons.wikimedia.org/wiki/File%3ABaked_cannelloni%2C_Rauenthal.jpg" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/baked-cannelloni.jpg" alt="Baked cannelloni">
                   </a>
@@ -474,10 +679,18 @@
                     <p class="original-name">Pasta di mama</p>
                     <p class="description">Oven-baked cannelloni filled with Provencal vegetables and tomato sauce</p>
                     <p class="source-line">Photo: <a href="https://commons.wikimedia.org/wiki/File%3ABaked_cannelloni%2C_Rauenthal.jpg" target="_blank" rel="noreferrer">Baked cannelloni, Rauenthal.jpg</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Baked cannelloni">
+                      <button class="add-button" type="button" data-cart-add="baked-cannelloni">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="baked-cannelloni" hidden>
+                        <button type="button" data-cart-decrease="baked-cannelloni" aria-label="Decrease Baked cannelloni">-</button>
+                        <span data-cart-quantity="baked-cannelloni">0</span>
+                        <button type="button" data-cart-increase="baked-cannelloni" aria-label="Increase Baked cannelloni">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Vegetarian" data-search="asparagus risotto risotto creamy risotto with asparagus, peas, vine tomato, arugula and parmesan">
+                <article class="dish-card" data-slug="asparagus-risotto" data-name="Asparagus risotto" data-original-name="Risotto" data-price="12.95" data-category="Vegetarian" data-search="asparagus risotto risotto creamy risotto with asparagus, peas, vine tomato, arugula and parmesan">
                   <a class="dish-image-link" href="https://www.onceuponachef.com/recipes/spring-risotto-with-asparagus-peas.html" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/asparagus-risotto.jpg" alt="Asparagus risotto">
                   </a>
@@ -489,6 +702,14 @@
                     <p class="original-name">Risotto</p>
                     <p class="description">Creamy risotto with asparagus, peas, vine tomato, arugula and Parmesan</p>
                     <p class="source-line">Photo: <a href="https://www.onceuponachef.com/recipes/spring-risotto-with-asparagus-peas.html" target="_blank" rel="noreferrer">Spring Risotto with Asparagus &amp; Peas - Once Upon a Chef</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Asparagus risotto">
+                      <button class="add-button" type="button" data-cart-add="asparagus-risotto">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="asparagus-risotto" hidden>
+                        <button type="button" data-cart-decrease="asparagus-risotto" aria-label="Decrease Asparagus risotto">-</button>
+                        <span data-cart-quantity="asparagus-risotto">0</span>
+                        <button type="button" data-cart-increase="asparagus-risotto" aria-label="Increase Asparagus risotto">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
@@ -502,7 +723,7 @@
               </div>
               <div class="dish-grid">
 
-                <article class="dish-card" data-category="Desserts" data-search="mascarpone semifreddo semifreddo light mascarpone ice cream with red-fruit compote and yogurt foam">
+                <article class="dish-card" data-slug="mascarpone-semifreddo" data-name="Mascarpone semifreddo" data-original-name="Semifreddo" data-price="4.85" data-category="Desserts" data-search="mascarpone semifreddo semifreddo light mascarpone ice cream with red-fruit compote and yogurt foam">
                   <a class="dish-image-link" href="https://www.montimar.nl/wp-content/uploads/2023/07/25.jpg" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/mascarpone-semifreddo.jpg" alt="Mascarpone semifreddo">
                   </a>
@@ -514,10 +735,18 @@
                     <p class="original-name">Semifreddo</p>
                     <p class="description">Light mascarpone ice cream with red-fruit compote and yogurt foam</p>
                     <p class="source-line">Photo: <a href="https://www.montimar.nl/wp-content/uploads/2023/07/25.jpg" target="_blank" rel="noreferrer">Montimar official dessert-style plated dish photo</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Mascarpone semifreddo">
+                      <button class="add-button" type="button" data-cart-add="mascarpone-semifreddo">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="mascarpone-semifreddo" hidden>
+                        <button type="button" data-cart-decrease="mascarpone-semifreddo" aria-label="Decrease Mascarpone semifreddo">-</button>
+                        <span data-cart-quantity="mascarpone-semifreddo">0</span>
+                        <button type="button" data-cart-increase="mascarpone-semifreddo" aria-label="Increase Mascarpone semifreddo">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Desserts" data-search="vacherin with strawberries vacherin vanilla ice cream, strawberries, meringue and whipped cream">
+                <article class="dish-card" data-slug="vacherin-with-strawberries" data-name="Vacherin with strawberries" data-original-name="Vacherin" data-price="5.45" data-category="Desserts" data-search="vacherin with strawberries vacherin vanilla ice cream, strawberries, meringue and whipped cream">
                   <a class="dish-image-link" href="https://www.montimar.nl/wp-content/uploads/2022/04/44.jpg" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/vacherin-with-strawberries.jpg" alt="Vacherin with strawberries">
                   </a>
@@ -529,10 +758,18 @@
                     <p class="original-name">Vacherin</p>
                     <p class="description">Vanilla ice cream, strawberries, meringue and whipped cream</p>
                     <p class="source-line">Photo: <a href="https://www.montimar.nl/wp-content/uploads/2022/04/44.jpg" target="_blank" rel="noreferrer">Montimar official ice cream dessert photo</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Vacherin with strawberries">
+                      <button class="add-button" type="button" data-cart-add="vacherin-with-strawberries">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="vacherin-with-strawberries" hidden>
+                        <button type="button" data-cart-decrease="vacherin-with-strawberries" aria-label="Decrease Vacherin with strawberries">-</button>
+                        <span data-cart-quantity="vacherin-with-strawberries">0</span>
+                        <button type="button" data-cart-increase="vacherin-with-strawberries" aria-label="Increase Vacherin with strawberries">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Desserts" data-search="dame blanche dame blanche vanilla ice cream with whipped cream and warm chocolate sauce">
+                <article class="dish-card" data-slug="dame-blanche" data-name="Dame Blanche" data-original-name="Dame Blanche" data-price="5.60" data-category="Desserts" data-search="dame blanche dame blanche vanilla ice cream with whipped cream and warm chocolate sauce">
                   <a class="dish-image-link" href="https://commons.wikimedia.org/wiki/File:Dame_Blanche%2C_Le_13%2C_2026.jpg" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/dame-blanche.jpg" alt="Dame Blanche">
                   </a>
@@ -544,10 +781,18 @@
                     <p class="original-name">Dame Blanche</p>
                     <p class="description">Vanilla ice cream with whipped cream and warm chocolate sauce</p>
                     <p class="source-line">Photo: <a href="https://commons.wikimedia.org/wiki/File:Dame_Blanche%2C_Le_13%2C_2026.jpg" target="_blank" rel="noreferrer">Dame Blanche, Le 13, 2026.jpg</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Dame Blanche">
+                      <button class="add-button" type="button" data-cart-add="dame-blanche">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="dame-blanche" hidden>
+                        <button type="button" data-cart-decrease="dame-blanche" aria-label="Decrease Dame Blanche">-</button>
+                        <span data-cart-quantity="dame-blanche">0</span>
+                        <button type="button" data-cart-increase="dame-blanche" aria-label="Increase Dame Blanche">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Desserts" data-search="lemon-passionfruit cheesecake tarta de queso lemon and passionfruit cheesecake with oreo crumble and passionfruit sauce">
+                <article class="dish-card" data-slug="lemon-passionfruit-cheesecake" data-name="Lemon-passionfruit cheesecake" data-original-name="Tarta de queso" data-price="5.25" data-category="Desserts" data-search="lemon-passionfruit cheesecake tarta de queso lemon and passionfruit cheesecake with oreo crumble and passionfruit sauce">
                   <a class="dish-image-link" href="https://gimmethatflavor.com/passion-fruit-cheesecake/" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/lemon-passionfruit-cheesecake.jpg" alt="Lemon-passionfruit cheesecake">
                   </a>
@@ -559,10 +804,18 @@
                     <p class="original-name">Tarta de queso</p>
                     <p class="description">Lemon and passionfruit cheesecake with Oreo crumble and passionfruit sauce</p>
                     <p class="source-line">Photo: <a href="https://gimmethatflavor.com/passion-fruit-cheesecake/" target="_blank" rel="noreferrer">Passion Fruit Cheesecake - Gimme That Flavor</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Lemon-passionfruit cheesecake">
+                      <button class="add-button" type="button" data-cart-add="lemon-passionfruit-cheesecake">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="lemon-passionfruit-cheesecake" hidden>
+                        <button type="button" data-cart-decrease="lemon-passionfruit-cheesecake" aria-label="Decrease Lemon-passionfruit cheesecake">-</button>
+                        <span data-cart-quantity="lemon-passionfruit-cheesecake">0</span>
+                        <button type="button" data-cart-increase="lemon-passionfruit-cheesecake" aria-label="Increase Lemon-passionfruit cheesecake">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Desserts" data-search="cheese selection fromages selection of cheeses with garnishes">
+                <article class="dish-card" data-slug="cheese-selection" data-name="Cheese selection" data-original-name="Fromages" data-price="7.15" data-category="Desserts" data-search="cheese selection fromages selection of cheeses with garnishes">
                   <a class="dish-image-link" href="https://www.dreamstime.com/photos-images/buffet-restaurant-cheese-plate-selection-fruits.html" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/cheese-selection.jpg" alt="Cheese selection">
                   </a>
@@ -574,6 +827,14 @@
                     <p class="original-name">Fromages</p>
                     <p class="description">Selection of cheeses with garnishes</p>
                     <p class="source-line">Photo: <a href="https://www.dreamstime.com/photos-images/buffet-restaurant-cheese-plate-selection-fruits.html" target="_blank" rel="noreferrer">Buffet Restaurant Cheese Plate Selection Fruits Stock Photos - Free ...</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Cheese selection">
+                      <button class="add-button" type="button" data-cart-add="cheese-selection">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="cheese-selection" hidden>
+                        <button type="button" data-cart-decrease="cheese-selection" aria-label="Decrease Cheese selection">-</button>
+                        <span data-cart-quantity="cheese-selection">0</span>
+                        <button type="button" data-cart-increase="cheese-selection" aria-label="Increase Cheese selection">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
@@ -587,7 +848,7 @@
               </div>
               <div class="dish-grid">
 
-                <article class="dish-card" data-category="Kids" data-search="serrano ham and melon ham &amp; meloen serrano ham with fresh melon">
+                <article class="dish-card" data-slug="serrano-ham-and-melon" data-name="Serrano ham and melon" data-original-name="Ham &amp; meloen" data-price="3.85" data-category="Kids" data-search="serrano ham and melon ham &amp; meloen serrano ham with fresh melon">
                   <a class="dish-image-link" href="https://commons.wikimedia.org/wiki/File:Prosciutto_con_melone_IMGP0936.jpg" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/serrano-ham-and-melon.jpg" alt="Serrano ham and melon">
                   </a>
@@ -599,10 +860,18 @@
                     <p class="original-name">Ham &amp; meloen</p>
                     <p class="description">Serrano ham with fresh melon</p>
                     <p class="source-line">Photo: <a href="https://commons.wikimedia.org/wiki/File:Prosciutto_con_melone_IMGP0936.jpg" target="_blank" rel="noreferrer">Prosciutto con melone IMGP0936.jpg</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Serrano ham and melon">
+                      <button class="add-button" type="button" data-cart-add="serrano-ham-and-melon">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="serrano-ham-and-melon" hidden>
+                        <button type="button" data-cart-decrease="serrano-ham-and-melon" aria-label="Decrease Serrano ham and melon">-</button>
+                        <span data-cart-quantity="serrano-ham-and-melon">0</span>
+                        <button type="button" data-cart-increase="serrano-ham-and-melon" aria-label="Increase Serrano ham and melon">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Kids" data-search="shrimp skewer spiesje met gamba&#x27;s shrimp skewer with salad and aioli">
+                <article class="dish-card" data-slug="shrimp-skewer" data-name="Shrimp skewer" data-original-name="Spiesje met gamba&#x27;s" data-price="5.45" data-category="Kids" data-search="shrimp skewer spiesje met gamba&#x27;s shrimp skewer with salad and aioli">
                   <a class="dish-image-link" href="https://www.pinterest.com/pin/shrimp-skewers-with-arugula-pesto-aioli--389420699014610564/" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/shrimp-skewer.jpg" alt="Shrimp skewer">
                   </a>
@@ -614,10 +883,18 @@
                     <p class="original-name">Spiesje met gamba&#x27;s</p>
                     <p class="description">Shrimp skewer with salad and aioli</p>
                     <p class="source-line">Photo: <a href="https://www.pinterest.com/pin/shrimp-skewers-with-arugula-pesto-aioli--389420699014610564/" target="_blank" rel="noreferrer">Shrimp Skewers with Arugula Pesto Aioli</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Shrimp skewer">
+                      <button class="add-button" type="button" data-cart-add="shrimp-skewer">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="shrimp-skewer" hidden>
+                        <button type="button" data-cart-decrease="shrimp-skewer" aria-label="Decrease Shrimp skewer">-</button>
+                        <span data-cart-quantity="shrimp-skewer">0</span>
+                        <button type="button" data-cart-increase="shrimp-skewer" aria-label="Increase Shrimp skewer">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Kids" data-search="tomato soup tomatensoep tomato soup with cream">
+                <article class="dish-card" data-slug="tomato-soup" data-name="Tomato soup" data-original-name="Tomatensoep" data-price="1.50" data-category="Kids" data-search="tomato soup tomatensoep tomato soup with cream">
                   <a class="dish-image-link" href="https://commons.wikimedia.org/wiki/File:Basil_and_Organic_Tomato_Soup.jpg" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/tomato-soup.jpg" alt="Tomato soup">
                   </a>
@@ -629,10 +906,18 @@
                     <p class="original-name">Tomatensoep</p>
                     <p class="description">Tomato soup with cream</p>
                     <p class="source-line">Photo: <a href="https://commons.wikimedia.org/wiki/File:Basil_and_Organic_Tomato_Soup.jpg" target="_blank" rel="noreferrer">Basil and Organic Tomato Soup.jpg</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Tomato soup">
+                      <button class="add-button" type="button" data-cart-add="tomato-soup">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="tomato-soup" hidden>
+                        <button type="button" data-cart-decrease="tomato-soup" aria-label="Decrease Tomato soup">-</button>
+                        <span data-cart-quantity="tomato-soup">0</span>
+                        <button type="button" data-cart-increase="tomato-soup" aria-label="Increase Tomato soup">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Kids" data-search="mini beef carpaccio mini carpaccio small beef carpaccio with arugula and parmesan">
+                <article class="dish-card" data-slug="mini-beef-carpaccio" data-name="Mini beef carpaccio" data-original-name="Mini carpaccio" data-price="4.35" data-category="Kids" data-search="mini beef carpaccio mini carpaccio small beef carpaccio with arugula and parmesan">
                   <a class="dish-image-link" href="https://commons.wikimedia.org/wiki/File%3ABeef_Carpaccio%2C_Restaurant%2C_Art_Gallery_of_New_South_Wales%2C_Sydnay%2C_2021.jpg" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/mini-beef-carpaccio.jpg" alt="Mini beef carpaccio">
                   </a>
@@ -644,10 +929,18 @@
                     <p class="original-name">Mini carpaccio</p>
                     <p class="description">Small beef carpaccio with arugula and Parmesan</p>
                     <p class="source-line">Photo: <a href="https://commons.wikimedia.org/wiki/File%3ABeef_Carpaccio%2C_Restaurant%2C_Art_Gallery_of_New_South_Wales%2C_Sydnay%2C_2021.jpg" target="_blank" rel="noreferrer">Beef Carpaccio, Restaurant, Art Gallery of New South Wales, Sydnay, 2021.jpg</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Mini beef carpaccio">
+                      <button class="add-button" type="button" data-cart-add="mini-beef-carpaccio">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="mini-beef-carpaccio" hidden>
+                        <button type="button" data-cart-decrease="mini-beef-carpaccio" aria-label="Decrease Mini beef carpaccio">-</button>
+                        <span data-cart-quantity="mini-beef-carpaccio">0</span>
+                        <button type="button" data-cart-increase="mini-beef-carpaccio" aria-label="Increase Mini beef carpaccio">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Kids" data-search="small fried white fish witvisje fried white fish with fries, applesauce and salad">
+                <article class="dish-card" data-slug="small-fried-white-fish" data-name="Small fried white fish" data-original-name="Witvisje" data-price="8.80" data-category="Kids" data-search="small fried white fish witvisje fried white fish with fries, applesauce and salad">
                   <a class="dish-image-link" href="https://www.dreamstime.com/stock-images-fried-fish-salad-bacon-barbecue-beef-beefsteak-blood-board-brisket-cholesterol-chop-closeup-dinner-eat-fat-fillet-food-fresh-image34335204" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/small-fried-white-fish.jpg" alt="Small fried white fish">
                   </a>
@@ -659,10 +952,18 @@
                     <p class="original-name">Witvisje</p>
                     <p class="description">Fried white fish with fries, applesauce and salad</p>
                     <p class="source-line">Photo: <a href="https://www.dreamstime.com/stock-images-fried-fish-salad-bacon-barbecue-beef-beefsteak-blood-board-brisket-cholesterol-chop-closeup-dinner-eat-fat-fillet-food-fresh-image34335204" target="_blank" rel="noreferrer">Fried fish with salad. stock photo. Image of dinner, appetizing - 34335204</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Small fried white fish">
+                      <button class="add-button" type="button" data-cart-add="small-fried-white-fish">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="small-fried-white-fish" hidden>
+                        <button type="button" data-cart-decrease="small-fried-white-fish" aria-label="Decrease Small fried white fish">-</button>
+                        <span data-cart-quantity="small-fried-white-fish">0</span>
+                        <button type="button" data-cart-increase="small-fried-white-fish" aria-label="Increase Small fried white fish">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Kids" data-search="spaghetti with tomato sauce spaghetti spaghetti with tomato sauce">
+                <article class="dish-card" data-slug="spaghetti-with-tomato-sauce" data-name="Spaghetti with tomato sauce" data-original-name="Spaghetti" data-price="3.50" data-category="Kids" data-search="spaghetti with tomato sauce spaghetti spaghetti with tomato sauce">
                   <a class="dish-image-link" href="https://www.myfussyeater.com/simple-tomato-spaghetti-sauce-kids/" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/spaghetti-with-tomato-sauce.jpg" alt="Spaghetti with tomato sauce">
                   </a>
@@ -674,10 +975,18 @@
                     <p class="original-name">Spaghetti</p>
                     <p class="description">Spaghetti with tomato sauce</p>
                     <p class="source-line">Photo: <a href="https://www.myfussyeater.com/simple-tomato-spaghetti-sauce-kids/" target="_blank" rel="noreferrer">Simple Tomato Spaghetti for Kids - My Fussy Eater | Easy Family Recipes</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Spaghetti with tomato sauce">
+                      <button class="add-button" type="button" data-cart-add="spaghetti-with-tomato-sauce">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="spaghetti-with-tomato-sauce" hidden>
+                        <button type="button" data-cart-decrease="spaghetti-with-tomato-sauce" aria-label="Decrease Spaghetti with tomato sauce">-</button>
+                        <span data-cart-quantity="spaghetti-with-tomato-sauce">0</span>
+                        <button type="button" data-cart-increase="spaghetti-with-tomato-sauce" aria-label="Increase Spaghetti with tomato sauce">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Kids" data-search="chicken fillet with fries kipfilet chicken fillet with fries and salad">
+                <article class="dish-card" data-slug="chicken-fillet-with-fries" data-name="Chicken fillet with fries" data-original-name="Kipfilet" data-price="5.45" data-category="Kids" data-search="chicken fillet with fries kipfilet chicken fillet with fries and salad">
                   <a class="dish-image-link" href="https://stockcake.com/i/delicious-grilled-chicken_891423_925872" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/chicken-fillet-with-fries.jpg" alt="Chicken fillet with fries">
                   </a>
@@ -689,10 +998,18 @@
                     <p class="original-name">Kipfilet</p>
                     <p class="description">Chicken fillet with fries and salad</p>
                     <p class="source-line">Photo: <a href="https://stockcake.com/i/delicious-grilled-chicken_891423_925872" target="_blank" rel="noreferrer">Free Delicious Grilled Chicken Image - Grilled, Chicken, Fries ...</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Chicken fillet with fries">
+                      <button class="add-button" type="button" data-cart-add="chicken-fillet-with-fries">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="chicken-fillet-with-fries" hidden>
+                        <button type="button" data-cart-decrease="chicken-fillet-with-fries" aria-label="Decrease Chicken fillet with fries">-</button>
+                        <span data-cart-quantity="chicken-fillet-with-fries">0</span>
+                        <button type="button" data-cart-increase="chicken-fillet-with-fries" aria-label="Increase Chicken fillet with fries">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Kids" data-search="frikandel with fries frikandel dutch frikandel sausage with fries, applesauce and salad">
+                <article class="dish-card" data-slug="frikandel-with-fries" data-name="Frikandel with fries" data-original-name="Frikandel" data-price="3.70" data-category="Kids" data-search="frikandel with fries frikandel dutch frikandel sausage with fries, applesauce and salad">
                   <a class="dish-image-link" href="https://chineesrestaurantchi.nl/product/friet-met-frikandel/" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/frikandel-with-fries.jpg" alt="Frikandel with fries">
                   </a>
@@ -704,10 +1021,18 @@
                     <p class="original-name">Frikandel</p>
                     <p class="description">Dutch frikandel sausage with fries, applesauce and salad</p>
                     <p class="source-line">Photo: <a href="https://chineesrestaurantchi.nl/product/friet-met-frikandel/" target="_blank" rel="noreferrer">Friet met Frikandel - Chinees Restaurant Chi Maastricht</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Frikandel with fries">
+                      <button class="add-button" type="button" data-cart-add="frikandel-with-fries">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="frikandel-with-fries" hidden>
+                        <button type="button" data-cart-decrease="frikandel-with-fries" aria-label="Decrease Frikandel with fries">-</button>
+                        <span data-cart-quantity="frikandel-with-fries">0</span>
+                        <button type="button" data-cart-increase="frikandel-with-fries" aria-label="Increase Frikandel with fries">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Kids" data-search="small steak with fries biefstuk small fried steak with fries, applesauce and salad">
+                <article class="dish-card" data-slug="small-steak-with-fries" data-name="Small steak with fries" data-original-name="Biefstuk" data-price="8.35" data-category="Kids" data-search="small steak with fries biefstuk small fried steak with fries, applesauce and salad">
                   <a class="dish-image-link" href="https://www.thespruceeats.com/steak-frites-recipe-8600699" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/small-steak-with-fries.jpg" alt="Small steak with fries">
                   </a>
@@ -719,10 +1044,18 @@
                     <p class="original-name">Biefstuk</p>
                     <p class="description">Small fried steak with fries, applesauce and salad</p>
                     <p class="source-line">Photo: <a href="https://www.thespruceeats.com/steak-frites-recipe-8600699" target="_blank" rel="noreferrer">Steak Frites Recipe</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Small steak with fries">
+                      <button class="add-button" type="button" data-cart-add="small-steak-with-fries">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="small-steak-with-fries" hidden>
+                        <button type="button" data-cart-decrease="small-steak-with-fries" aria-label="Decrease Small steak with fries">-</button>
+                        <span data-cart-quantity="small-steak-with-fries">0</span>
+                        <button type="button" data-cart-increase="small-steak-with-fries" aria-label="Increase Small steak with fries">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Kids" data-search="kids vanilla ice cream kinderijsje vanilla ice cream with whipped cream and a surprise">
+                <article class="dish-card" data-slug="kids-vanilla-ice-cream" data-name="Kids vanilla ice cream" data-original-name="Kinderijsje" data-price="2.20" data-category="Kids" data-search="kids vanilla ice cream kinderijsje vanilla ice cream with whipped cream and a surprise">
                   <a class="dish-image-link" href="https://storage.googleapis.com/dumciwukyrgeue/how-to-make-sprinkles-for-ice-cream.html" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/kids-vanilla-ice-cream.jpg" alt="Kids vanilla ice cream">
                   </a>
@@ -734,6 +1067,14 @@
                     <p class="original-name">Kinderijsje</p>
                     <p class="description">Vanilla ice cream with whipped cream and a surprise</p>
                     <p class="source-line">Photo: <a href="https://storage.googleapis.com/dumciwukyrgeue/how-to-make-sprinkles-for-ice-cream.html" target="_blank" rel="noreferrer">How To Make Sprinkles For Ice Cream at Penny Troche blog</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Kids vanilla ice cream">
+                      <button class="add-button" type="button" data-cart-add="kids-vanilla-ice-cream">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="kids-vanilla-ice-cream" hidden>
+                        <button type="button" data-cart-decrease="kids-vanilla-ice-cream" aria-label="Decrease Kids vanilla ice cream">-</button>
+                        <span data-cart-quantity="kids-vanilla-ice-cream">0</span>
+                        <button type="button" data-cart-increase="kids-vanilla-ice-cream" aria-label="Increase Kids vanilla ice cream">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
@@ -747,7 +1088,7 @@
               </div>
               <div class="dish-grid">
 
-                <article class="dish-card" data-category="Coffee" data-search="irish coffee irish coffee coffee cocktail with irish whiskey">
+                <article class="dish-card" data-slug="irish-coffee" data-name="Irish coffee" data-original-name="Irish coffee" data-price="5.00" data-category="Coffee" data-search="irish coffee irish coffee coffee cocktail with irish whiskey">
                   <a class="dish-image-link" href="https://commons.wikimedia.org/wiki/File%3ACompetitive_Irish_coffee_on_Coffee_Right_in_Brno%2C_Czech_Republic.jpg" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/irish-coffee.jpg" alt="Irish coffee">
                   </a>
@@ -759,10 +1100,18 @@
                     <p class="original-name">Irish coffee</p>
                     <p class="description">Coffee cocktail with Irish whiskey</p>
                     <p class="source-line">Photo: <a href="https://commons.wikimedia.org/wiki/File%3ACompetitive_Irish_coffee_on_Coffee_Right_in_Brno%2C_Czech_Republic.jpg" target="_blank" rel="noreferrer">Competitive Irish coffee on Coffee Right in Brno, Czech Republic.jpg</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Irish coffee">
+                      <button class="add-button" type="button" data-cart-add="irish-coffee">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="irish-coffee" hidden>
+                        <button type="button" data-cart-decrease="irish-coffee" aria-label="Decrease Irish coffee">-</button>
+                        <span data-cart-quantity="irish-coffee">0</span>
+                        <button type="button" data-cart-increase="irish-coffee" aria-label="Increase Irish coffee">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Coffee" data-search="la chouffe coffee la chouffe coffee coffee with la chouffe liqueur">
+                <article class="dish-card" data-slug="la-chouffe-coffee" data-name="La Chouffe coffee" data-original-name="La Chouffe Coffee" data-price="5.00" data-category="Coffee" data-search="la chouffe coffee la chouffe coffee coffee with la chouffe liqueur">
                   <a class="dish-image-link" href="https://www.dreamstime.com/stock-photo-liqueur-coffee-whipped-cream-tall-glass-image58205046" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/la-chouffe-coffee.jpg" alt="La Chouffe coffee">
                   </a>
@@ -774,10 +1123,18 @@
                     <p class="original-name">La Chouffe Coffee</p>
                     <p class="description">Coffee with La Chouffe liqueur</p>
                     <p class="source-line">Photo: <a href="https://www.dreamstime.com/stock-photo-liqueur-coffee-whipped-cream-tall-glass-image58205046" target="_blank" rel="noreferrer">Liqueur Coffee with Whipped Cream Stock Photo - Image of espresso ...</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for La Chouffe coffee">
+                      <button class="add-button" type="button" data-cart-add="la-chouffe-coffee">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="la-chouffe-coffee" hidden>
+                        <button type="button" data-cart-decrease="la-chouffe-coffee" aria-label="Decrease La Chouffe coffee">-</button>
+                        <span data-cart-quantity="la-chouffe-coffee">0</span>
+                        <button type="button" data-cart-increase="la-chouffe-coffee" aria-label="Increase La Chouffe coffee">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Coffee" data-search="spanish coffee spanish coffee coffee with licor 43">
+                <article class="dish-card" data-slug="spanish-coffee" data-name="Spanish coffee" data-original-name="Spanish coffee" data-price="4.85" data-category="Coffee" data-search="spanish coffee spanish coffee coffee with licor 43">
                   <a class="dish-image-link" href="https://www.pinterest.com/pin/832251206109539128/" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/spanish-coffee.jpg" alt="Spanish coffee">
                   </a>
@@ -789,10 +1146,18 @@
                     <p class="original-name">Spanish coffee</p>
                     <p class="description">Coffee with Licor 43</p>
                     <p class="source-line">Photo: <a href="https://www.pinterest.com/pin/832251206109539128/" target="_blank" rel="noreferrer">Spanish Coffee Recipe: - 4 cl Licor 43 - Fill with Coffee - 3 cl ...</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for Spanish coffee">
+                      <button class="add-button" type="button" data-cart-add="spanish-coffee">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="spanish-coffee" hidden>
+                        <button type="button" data-cart-decrease="spanish-coffee" aria-label="Decrease Spanish coffee">-</button>
+                        <span data-cart-quantity="spanish-coffee">0</span>
+                        <button type="button" data-cart-increase="spanish-coffee" aria-label="Increase Spanish coffee">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
-                <article class="dish-card" data-category="Coffee" data-search="french coffee french coffee coffee with grand marnier">
+                <article class="dish-card" data-slug="french-coffee" data-name="French coffee" data-original-name="French coffee" data-price="5.80" data-category="Coffee" data-search="french coffee french coffee coffee with grand marnier">
                   <a class="dish-image-link" href="https://isinginthekitchen.com/2013/05/12/grand-marnier-coffee-cocktail-some-mothers-love-from-black-blue-morning/" target="_blank" rel="noreferrer" title="Open photo source">
                     <img class="dish-image" src="assets/images/french-coffee.jpg" alt="French coffee">
                   </a>
@@ -804,6 +1169,14 @@
                     <p class="original-name">French coffee</p>
                     <p class="description">Coffee with Grand Marnier</p>
                     <p class="source-line">Photo: <a href="https://isinginthekitchen.com/2013/05/12/grand-marnier-coffee-cocktail-some-mothers-love-from-black-blue-morning/" target="_blank" rel="noreferrer">Grand Marnier Coffee Cocktail. Some Mother&#x27;s Love From Black &amp; Blue ...</a></p>
+                    <div class="dish-actions" aria-label="Cart controls for French coffee">
+                      <button class="add-button" type="button" data-cart-add="french-coffee">Add</button>
+                      <div class="quantity-control dish-quantity" data-cart-controls="french-coffee" hidden>
+                        <button type="button" data-cart-decrease="french-coffee" aria-label="Decrease French coffee">-</button>
+                        <span data-cart-quantity="french-coffee">0</span>
+                        <button type="button" data-cart-increase="french-coffee" aria-label="Increase French coffee">+</button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
@@ -812,6 +1185,28 @@
 
     <p id="empty-state" hidden>No dishes match that search.</p>
   </main>
+
+  <div class="cart-backdrop" id="cart-backdrop" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" aria-hidden="true" hidden>
+    <div class="cart-header">
+      <div>
+        <p class="eyebrow">Local order list</p>
+        <h2 id="cart-title">Order summary</h2>
+      </div>
+      <button class="icon-button" id="cart-close" type="button" aria-label="Close order summary">x</button>
+    </div>
+    <div class="cart-body">
+      <p class="cart-empty" id="cart-empty">No dishes added yet.</p>
+      <div class="cart-items" id="cart-items"></div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cart-total">EUR 0.00</strong>
+      </div>
+      <button class="clear-button" id="cart-clear" type="button">Clear cart</button>
+    </div>
+  </aside>
 
   <footer>
     <p>Menu text and prices are translated from Montimar's public menu page. Photo attributions are stored in <a href="data/photo_sources.json">data/photo_sources.json</a>.</p>
