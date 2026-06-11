@@ -1,0 +1,379 @@
+{
+  "menu_source": "https://www.montimar.nl/menukaart/",
+  "restaurant_source": "https://www.montimar.nl/",
+  "notes": [
+    "Dish text and prices translated from the Montimar menu page.",
+    "Official Montimar images were used where they clearly represented a listed dish; Wikimedia Commons representative photos fill gaps.",
+    "Photos are visual aids, not a guarantee of exact restaurant plating."
+  ],
+  "photos": [
+    {
+      "dish": "Bread & herb butter",
+      "source": "https://commons.wikimedia.org/wiki/File:Bread_and_butter%2C_Hechtsheim.jpg",
+      "title": "Bread and butter, Hechtsheim.jpg",
+      "credit": "Wikimedia Commons contributor",
+      "license": "See Commons file page",
+      "search": "Exact Wikimedia Commons file override"
+    },
+    {
+      "dish": "Beef carpaccio",
+      "source": "https://www.montimar.nl/wp-content/uploads/2019/01/10.jpg",
+      "title": "Montimar official beef carpaccio photo",
+      "credit": "Montimar Restaurant",
+      "license": "Restaurant website photo",
+      "search": "Official Montimar site"
+    },
+    {
+      "dish": "Garlic shrimp pil pil",
+      "source": "https://www.montimar.nl//wp-content/uploads/2019/01/33.jpg",
+      "title": "Montimar official shrimp dish photo",
+      "credit": "Montimar Restaurant",
+      "license": "Restaurant website photo",
+      "search": "Official Montimar site"
+    },
+    {
+      "dish": "Crispy tuna tacos",
+      "source": "https://commons.wikimedia.org/wiki/File%3ANoyo_River_Grill_-_2021-08-23_-_Sarah_Stierch_03.jpg",
+      "title": "Noyo River Grill - 2021-08-23 - Sarah Stierch 03.jpg",
+      "credit": "Missvain",
+      "license": "CC BY 4.0",
+      "search": "tuna tartare taco avocado"
+    },
+    {
+      "dish": "Tempura chicken salad",
+      "source": "https://commons.wikimedia.org/wiki/File%3AChicken_Bento_Box_with_Shrimp_Tempura_%40_Sakura_Korean_Japanese_Restaurant_%285690273727%29.jpg",
+      "title": "Chicken Bento Box with Shrimp Tempura @ Sakura Korean Japanese Restaurant (5690273727).jpg",
+      "credit": "andrewarchy from Toronto, Canada",
+      "license": "CC BY 2.0",
+      "search": "tempura chicken salad mango"
+    },
+    {
+      "dish": "Escargots in garlic butter",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABurgundy_escargots%2C_garlic%2C_parsley%2C_butter.jpg",
+      "title": "Burgundy escargots, garlic, parsley, butter.jpg",
+      "credit": "T.Tseng",
+      "license": "CC BY 2.0",
+      "search": "escargots garlic butter"
+    },
+    {
+      "dish": "Mixed tapas tasting",
+      "source": "https://commons.wikimedia.org/wiki/File:Tapas_bar_a_Madrid_%286267019130%29.jpg",
+      "title": "Tapas bar a Madrid (6267019130).jpg",
+      "credit": "Wikimedia Commons contributor",
+      "license": "See Commons file page",
+      "search": "Exact Wikimedia Commons file override"
+    },
+    {
+      "dish": "Spring sushi rice bowl",
+      "source": "https://commons.wikimedia.org/wiki/File%3A%22Fully_loaded%22_sushi_bowl_-_Happy_Maki.jpg",
+      "title": "\"Fully loaded\" sushi bowl - Happy Maki.jpg",
+      "credit": "Andy Li",
+      "license": "CC0",
+      "search": "sushi rice bowl asparagus avocado edamame"
+    },
+    {
+      "dish": "Provencal grilled vegetable salad",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGrilled_fish_with_vegetables_and_lemon.jpg",
+      "title": "Grilled fish with vegetables and lemon.jpg",
+      "credit": "Luca.favorido",
+      "license": "CC BY-SA 4.0",
+      "search": "grilled vegetable salad parmesan"
+    },
+    {
+      "dish": "Smoked salmon and fennel",
+      "source": "https://commons.wikimedia.org/wiki/File%3AVarmr%C3%B8get_laks%2C_fennikel%2C_gulerod%2C_r%C3%B8dbede%2C_selleri%2C_persille_og_ristet_br%C3%B8d_%284907663161%29.jpg",
+      "title": "Varmrøget laks, fennikel, gulerod, rødbede, selleri, persille og ristet brød (4907663161).jpg",
+      "credit": "cyclonebill from Copenhagen, Denmark",
+      "license": "CC BY-SA 2.0",
+      "search": "smoked salmon fennel salad"
+    },
+    {
+      "dish": "White asparagus with ham and egg",
+      "source": "https://commons.wikimedia.org/wiki/File:Asparagus_NL.jpg",
+      "title": "Asparagus NL.jpg",
+      "credit": "Wikimedia Commons contributor",
+      "license": "See Commons file page",
+      "search": "Exact Wikimedia Commons file override"
+    },
+    {
+      "dish": "Provencal tomato soup",
+      "source": "https://commons.wikimedia.org/wiki/File:Basil_and_Organic_Tomato_Soup.jpg",
+      "title": "Basil and Organic Tomato Soup.jpg",
+      "credit": "Wikimedia Commons contributor",
+      "license": "See Commons file page",
+      "search": "Exact Wikimedia Commons file override"
+    },
+    {
+      "dish": "Creamy asparagus soup",
+      "source": "https://commons.wikimedia.org/wiki/File%3AASparagus_soup001.jpg",
+      "title": "ASparagus soup001.jpg",
+      "credit": "Hortensja Bukietowa",
+      "license": "CC BY-SA 4.0",
+      "search": "cream asparagus soup"
+    },
+    {
+      "dish": "Basque seafood soup",
+      "source": "https://www.montimar.nl//wp-content/uploads/2019/01/33.jpg",
+      "title": "Montimar official seafood skillet photo",
+      "credit": "Montimar Restaurant",
+      "license": "Restaurant website photo",
+      "search": "Official Montimar site"
+    },
+    {
+      "dish": "Asian grilled chicken",
+      "source": "https://commons.wikimedia.org/wiki/File:Chicken_teriyaki%2C_Fried_chicken%2C_Krasnoyarsk%2C_Russia.jpg",
+      "title": "Chicken teriyaki, Fried chicken, Krasnoyarsk, Russia.jpg",
+      "credit": "Wikimedia Commons contributor",
+      "license": "See Commons file page",
+      "search": "Exact Wikimedia Commons file override"
+    },
+    {
+      "dish": "Lamb duo",
+      "source": "https://commons.wikimedia.org/wiki/File%3A2nd_June_2012_Lamb_Steak_1.jpg",
+      "title": "2nd June 2012 Lamb Steak 1.jpg",
+      "credit": "Murcotipton",
+      "license": "CC BY-SA 3.0",
+      "search": "lamb steak serrano ham aubergine"
+    },
+    {
+      "dish": "Steak and shrimp",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASurf_and_Turf_Australian.jpg",
+      "title": "Surf and Turf Australian.jpg",
+      "credit": "Finbar.concaig",
+      "license": "CC BY-SA 4.0",
+      "search": "steak shrimp bearnaise"
+    },
+    {
+      "dish": "Pork tenderloin with serrano",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGarin%27s_pork_tenderloin_2007.jpg",
+      "title": "Garin's pork tenderloin 2007.jpg",
+      "credit": "Timothy Vollmer",
+      "license": "CC BY 2.0",
+      "search": "pork tenderloin serrano ham sauce"
+    },
+    {
+      "dish": "Black Angus rump steak Bordelaise",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABeef_steak_at_restaurant_Harald.jpg",
+      "title": "Beef steak at restaurant Harald.jpg",
+      "credit": "JIP",
+      "license": "CC BY-SA 3.0",
+      "search": "steak bordelaise red wine sauce"
+    },
+    {
+      "dish": "Tenderloin with pepper sauce",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABlack_pepper_beef_tenderloin_pasta.jpg",
+      "title": "Black pepper beef tenderloin pasta.jpg",
+      "credit": "Jamnojam",
+      "license": "CC BY 4.0",
+      "search": "beef tenderloin pepper sauce"
+    },
+    {
+      "dish": "Pan-fried plaice",
+      "source": "https://commons.wikimedia.org/wiki/File%3AModern_cookery%2C_in_all_its_branches.djvu",
+      "title": "Modern cookery, in all its branches.djvu",
+      "credit": "Eliza Acton",
+      "license": "Public domain",
+      "search": "plaice fillet capers lemon"
+    },
+    {
+      "dish": "Salmon with beurre blanc",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACajun-Spiced_Salmon.jpg",
+      "title": "Cajun-Spiced Salmon.jpg",
+      "credit": "HarshLight",
+      "license": "CC BY 2.0",
+      "search": "salmon beurre blanc"
+    },
+    {
+      "dish": "Cod bourride",
+      "source": "https://commons.wikimedia.org/wiki/File:Dorschfilet_Gem%C3%BCse_Rostock.jpg",
+      "title": "Dorschfilet Gemüse Rostock.jpg",
+      "credit": "Wikimedia Commons contributor",
+      "license": "See Commons file page",
+      "search": "Exact Wikimedia Commons file override"
+    },
+    {
+      "dish": "Wok-fried black tiger shrimp",
+      "source": "https://commons.wikimedia.org/wiki/File%3AButtered_Garlic_Shrimp_Viand_at_Night.jpg",
+      "title": "Buttered Garlic Shrimp Viand at Night.jpg",
+      "credit": "LadyPinayForever",
+      "license": "CC BY 4.0",
+      "search": "black tiger shrimp garlic chili"
+    },
+    {
+      "dish": "Sea bream and shrimp",
+      "source": "https://commons.wikimedia.org/wiki/File:14-05-2017_Sea_bream_on_a_barbeque%2C_Albufeira.JPG",
+      "title": "14-05-2017 Sea bream on a barbeque, Albufeira.JPG",
+      "credit": "Wikimedia Commons contributor",
+      "license": "See Commons file page",
+      "search": "Exact Wikimedia Commons file override"
+    },
+    {
+      "dish": "Baked cannelloni",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABaked_cannelloni%2C_Rauenthal.jpg",
+      "title": "Baked cannelloni, Rauenthal.jpg",
+      "credit": "Gerda Arendt",
+      "license": "CC BY-SA 4.0",
+      "search": "cannelloni vegetables tomato sauce"
+    },
+    {
+      "dish": "Asparagus risotto",
+      "source": "https://www.montimar.nl/wp-content/uploads/2019/11/81.jpg",
+      "title": "Montimar official plated vegetarian dish photo",
+      "credit": "Montimar Restaurant",
+      "license": "Restaurant website photo",
+      "search": "Official Montimar site"
+    },
+    {
+      "dish": "Mascarpone semifreddo",
+      "source": "https://www.montimar.nl/wp-content/uploads/2023/07/25.jpg",
+      "title": "Montimar official dessert-style plated dish photo",
+      "credit": "Montimar Restaurant",
+      "license": "Restaurant website photo",
+      "search": "Official Montimar site"
+    },
+    {
+      "dish": "Vacherin with strawberries",
+      "source": "https://www.montimar.nl/wp-content/uploads/2022/04/44.jpg",
+      "title": "Montimar official ice cream dessert photo",
+      "credit": "Montimar Restaurant",
+      "license": "Restaurant website photo",
+      "search": "Official Montimar site"
+    },
+    {
+      "dish": "Dame Blanche",
+      "source": "https://commons.wikimedia.org/wiki/File:Dame_Blanche%2C_Le_13%2C_2026.jpg",
+      "title": "Dame Blanche, Le 13, 2026.jpg",
+      "credit": "Wikimedia Commons contributor",
+      "license": "See Commons file page",
+      "search": "Exact Wikimedia Commons file override"
+    },
+    {
+      "dish": "Lemon-passionfruit cheesecake",
+      "source": "https://commons.wikimedia.org/wiki/File%3A20170810_Bolivia_1689%2B94%2B97%2B98_Copacabana_sRGB_%2824128795868%29.jpg",
+      "title": "20170810 Bolivia 1689+94+97+98 Copacabana sRGB (24128795868).jpg",
+      "credit": "Dan Lundberg",
+      "license": "CC BY-SA 2.0",
+      "search": "passion fruit cheesecake oreo crumble"
+    },
+    {
+      "dish": "Cheese selection",
+      "source": "https://commons.wikimedia.org/wiki/File:Cheese_Platter.jpg",
+      "title": "Cheese Platter.jpg",
+      "credit": "Wikimedia Commons contributor",
+      "license": "See Commons file page",
+      "search": "Exact Wikimedia Commons file override"
+    },
+    {
+      "dish": "Serrano ham and melon",
+      "source": "https://commons.wikimedia.org/wiki/File:Prosciutto_con_melone_IMGP0936.jpg",
+      "title": "Prosciutto con melone IMGP0936.jpg",
+      "credit": "Wikimedia Commons contributor",
+      "license": "See Commons file page",
+      "search": "Exact Wikimedia Commons file override"
+    },
+    {
+      "dish": "Shrimp skewer",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABacon_Wrapped_Shrimp_Skewers_at_The_Revel_Patio_Grill.jpg",
+      "title": "Bacon Wrapped Shrimp Skewers at The Revel Patio Grill.jpg",
+      "credit": "Revelpatiogrill",
+      "license": "CC0",
+      "search": "shrimp skewer salad aioli"
+    },
+    {
+      "dish": "Tomato soup",
+      "source": "https://commons.wikimedia.org/wiki/File:Basil_and_Organic_Tomato_Soup.jpg",
+      "title": "Basil and Organic Tomato Soup.jpg",
+      "credit": "Wikimedia Commons contributor",
+      "license": "See Commons file page",
+      "search": "Exact Wikimedia Commons file override"
+    },
+    {
+      "dish": "Mini beef carpaccio",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABeef_Carpaccio%2C_Restaurant%2C_Art_Gallery_of_New_South_Wales%2C_Sydnay%2C_2021.jpg",
+      "title": "Beef Carpaccio, Restaurant, Art Gallery of New South Wales, Sydnay, 2021.jpg",
+      "credit": "Chris Olszewski",
+      "license": "CC BY-SA 4.0",
+      "search": "beef carpaccio arugula parmesan"
+    },
+    {
+      "dish": "Small fried white fish",
+      "source": "https://commons.wikimedia.org/wiki/File:Plate_of_fish_and_chips.jpg",
+      "title": "Plate of fish and chips.jpg",
+      "credit": "Wikimedia Commons contributor",
+      "license": "See Commons file page",
+      "search": "Exact Wikimedia Commons file override"
+    },
+    {
+      "dish": "Spaghetti with tomato sauce",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALiat_Portal_for_Foodie_Disorder_-_Homemade_Schnitzel_with_Spaghetti_in_Tomato_Sauce.jpg",
+      "title": "Liat Portal for Foodie Disorder - Homemade Schnitzel with Spaghetti in Tomato Sauce.jpg",
+      "credit": "HaJunkiyada",
+      "license": "CC BY-SA 4.0",
+      "search": "spaghetti tomato sauce"
+    },
+    {
+      "dish": "Chicken fillet with fries",
+      "source": "https://commons.wikimedia.org/wiki/File%3AChicken_Fillet_Salad.JPG",
+      "title": "Chicken Fillet Salad.JPG",
+      "credit": "Ceeseven",
+      "license": "CC BY-SA 4.0",
+      "search": "chicken breast fries salad"
+    },
+    {
+      "dish": "Frikandel with fries",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFrikandel.JPG",
+      "title": "Frikandel.JPG",
+      "credit": "Piero at Dutch Wikipedia",
+      "license": "CC BY-SA 3.0",
+      "search": "frikandel fries"
+    },
+    {
+      "dish": "Small steak with fries",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACountryFriedSteak.jpg",
+      "title": "CountryFriedSteak.jpg",
+      "credit": "No machine-readable author provided. Bloodshedder~commonswiki assumed (based on copyright claims).",
+      "license": "CC BY-SA 2.5",
+      "search": "steak fries"
+    },
+    {
+      "dish": "Kids vanilla ice cream",
+      "source": "https://commons.wikimedia.org/wiki/File%3AApple_cake_with_vanilla_ice_cream_1.jpg",
+      "title": "Apple cake with vanilla ice cream 1.jpg",
+      "credit": "W.carter",
+      "license": "CC0",
+      "search": "vanilla ice cream whipped cream sprinkles"
+    },
+    {
+      "dish": "Irish coffee",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACompetitive_Irish_coffee_on_Coffee_Right_in_Brno%2C_Czech_Republic.jpg",
+      "title": "Competitive Irish coffee on Coffee Right in Brno, Czech Republic.jpg",
+      "credit": "Frettie",
+      "license": "CC BY 3.0",
+      "search": "irish coffee"
+    },
+    {
+      "dish": "La Chouffe coffee",
+      "source": "https://commons.wikimedia.org/wiki/File%3AErdbeerbecher_mit_Eis_und_Sahne.jpg",
+      "title": "Erdbeerbecher mit Eis und Sahne.jpg",
+      "credit": "Manfred&amp;Barbara Aulbach",
+      "license": "CC BY-SA 3.0",
+      "search": "liqueur coffee whipped cream"
+    },
+    {
+      "dish": "Spanish coffee",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABarraquito.jpg",
+      "title": "Barraquito.jpg",
+      "credit": "Juan Manuel Parra from Puerto de la Cruz, Spain",
+      "license": "CC BY-SA 2.0",
+      "search": "spanish coffee licor 43"
+    },
+    {
+      "dish": "French coffee",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFood_display_case_at_the_counter_of_French_Coffee_Shop%2C_Dieppe_2026-05-11.jpg",
+      "title": "Food display case at the counter of French Coffee Shop, Dieppe 2026-05-11.jpg",
+      "credit": "Andy Li",
+      "license": "CC0",
+      "search": "french coffee grand marnier"
+    }
+  ]
+}
