@@ -4,7 +4,7 @@ A practical English visual menu for Montimar Mierlo. It includes every listed me
 
 Source menu: https://www.montimar.nl/menukaart/
 
-Photos are representative visual aids. Some come from Montimar's own public website where a matching image was available; the rest are representative Wikimedia Commons images. Attribution details are in `data/photo_sources.json`.
+Photos are representative visual aids. Some come from Montimar's own public website where a matching image was available; the rest are representative external web or Wikimedia Commons images. Attribution and source details are in `data/photo_sources.json`.
 
 ## Local use
 

@@ -17,6 +17,7 @@ IMG_DIR = ROOT / "assets" / "images"
 DATA_DIR = ROOT / "data"
 TMP_DIR = ROOT / "assets" / "download-cache"
 CACHE_FILE = TMP_DIR / "commons_lookup_cache.json"
+PHOTO_REPLACEMENTS_FILE = DATA_DIR / "photo_replacements.json"
 UA = "montimar-visual-menu/1.0 (local research)"
 
 
@@ -257,6 +258,13 @@ def request_bytes(url):
     raise RuntimeError(f"Could not download {url}")
 
 
+def external_image_replacements():
+    if not PHOTO_REPLACEMENTS_FILE.exists():
+        return {}
+    replacements = json.loads(PHOTO_REPLACEMENTS_FILE.read_text(encoding="utf-8"))
+    return {item["slug"]: item for item in replacements}
+
+
 def commons_image(query):
     TMP_DIR.mkdir(parents=True, exist_ok=True)
     cache = {}
@@ -329,6 +337,22 @@ def prepare_image(item):
     TMP_DIR.mkdir(parents=True, exist_ok=True)
     slug = item["slug"]
     output = IMG_DIR / f"{slug}.jpg"
+    external_override = external_image_replacements().get(slug)
+    if external_override:
+        cached = TMP_DIR / f"external-{slug}.jpg"
+        if not cached.exists():
+            cached.write_bytes(request_bytes(external_override["image_url"]))
+        if not output.exists() or cached.stat().st_mtime > output.stat().st_mtime:
+            optimize(cached, output)
+        return {
+            "image": f"assets/images/{slug}.jpg",
+            "image_title": external_override["title"],
+            "image_credit": external_override["credit"],
+            "image_license": external_override["license"],
+            "image_source": external_override["source_url"],
+            "image_search": external_override["search"],
+        }
+
     file_override = FILE_IMAGE_OVERRIDES.get(slug)
     if file_override:
         cached = TMP_DIR / f"override-{slug}{Path(file_override).suffix or '.jpg'}"
@@ -920,7 +944,7 @@ A practical English visual menu for Montimar Mierlo. It includes every listed me
 
 Source menu: {MENU_SOURCE}
 
-Photos are representative visual aids. Some come from Montimar's own public website where a matching image was available; the rest are representative Wikimedia Commons images. Attribution details are in `data/photo_sources.json`.
+Photos are representative visual aids. Some come from Montimar's own public website where a matching image was available; the rest are representative external web or Wikimedia Commons images. Attribution and source details are in `data/photo_sources.json`.
 
 ## Local use
 
